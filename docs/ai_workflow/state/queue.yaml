@@ -176,14 +176,14 @@ queue:
     title: "Implementer engine et sessions SQLAlchemy"
     version_target: v0.2.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-025.md
     depends_on: [BL-023, BL-024]
   - id: BL-026
     title: "Implementer la Unit of Work SQLAlchemy"
     version_target: v0.2.0
     priority: P0
-    status: TODO
+    status: READY
     path: docs/backlog/backlogs/BL-026.md
     depends_on: [BL-025]
   - id: BL-027
