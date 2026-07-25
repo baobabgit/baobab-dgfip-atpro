@@ -44,7 +44,7 @@ dev = [
     "twine>=6.2.0",
     "pre-commit>=4.6.1",
     "pydantic-settings>=2.14.2",
-    "pyyaml>=6.0",
+    "pyyaml>=6.0.3",
 ]
 docs = [
     "sphinx>=9.1.0",    
