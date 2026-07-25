@@ -83,15 +83,23 @@ def main() -> int:
     queue = ROOT / "docs/ai_workflow/state/queue.yaml"
     require(queue.exists(), "docs/ai_workflow/state/queue.yaml manquant", errors)
 
-    version_required = [
-        ROOT / "docs/ai_workflow/versions/v0.1.0/version.yaml",
-        ROOT / "docs/ai_workflow/versions/v0.1.0/scope.md",
-        ROOT / "docs/ai_workflow/versions/v0.1.0/validation.md",
-        ROOT / "docs/ai_workflow/versions/v0.1.0/integration_matrix.yaml",
-        ROOT / "docs/ai_workflow/versions/v0.1.0/release_report.md",
-    ]
-    for required in version_required:
-        require(required.exists(), f"Fichier de version manquant: {required}", errors)
+    for version in ("v0.1.0", "v0.2.0"):
+        version_required = [
+            ROOT / f"docs/ai_workflow/versions/{version}/version.yaml",
+            ROOT / f"docs/ai_workflow/versions/{version}/scope.md",
+            ROOT / f"docs/ai_workflow/versions/{version}/validation.md",
+            ROOT / f"docs/ai_workflow/versions/{version}/integration_matrix.yaml",
+            ROOT / f"docs/ai_workflow/versions/{version}/release_report.md",
+        ]
+        for required in version_required:
+            require(
+                required.exists(),
+                f"Fichier de version manquant: {required}",
+                errors,
+            )
+
+    persistence = ROOT / "docs/contracts/persistence_contract.md"
+    require(persistence.exists(), "Contrat de persistance manquant", errors)
 
     for path in feat_dir.glob("FEAT-*.md"):
         text = read(path)

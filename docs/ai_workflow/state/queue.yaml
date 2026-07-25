@@ -1,16 +1,7 @@
 # File de backlogs — gérée par l'Orchestrateur
-# L'orchestrateur sélectionne le prochain backlog selon :
-#   1. version active
-#   2. dépendances satisfaites
-#   3. priorité la plus élevée (P0 > P1 > P2 > P3 > P4)
-#   4. impact bloquant
-#   5. risque à réduire
-#   6. effort raisonnable
-#   7. absence de blocage d'intégration
-#
 # Graphe de dépendances : dependency_graph.yaml
 
-version_active: v0.1.0
+version_active: v0.2.0
 
 queue:
   - id: BL-001
@@ -160,11 +151,185 @@ queue:
     status: DONE
     path: docs/backlog/backlogs/BL-021.md
     depends_on: [BL-018, BL-019]
-
-
-
-
-
-
-
-
+  - id: BL-022
+    title: "Rediger l'ADR de persistance v0.2.0"
+    version_target: v0.2.0
+    priority: P0
+    status: READY
+    path: docs/backlog/backlogs/BL-022.md
+    depends_on: [BL-021]
+  - id: BL-023
+    title: "Ajouter dependances et configuration PostgreSQL"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-023.md
+    depends_on: [BL-022]
+  - id: BL-024
+    title: "Fournir PostgreSQL via Docker Compose"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-024.md
+    depends_on: [BL-023]
+  - id: BL-025
+    title: "Implementer engine et sessions SQLAlchemy"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-025.md
+    depends_on: [BL-023, BL-024]
+  - id: BL-026
+    title: "Implementer la Unit of Work SQLAlchemy"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-026.md
+    depends_on: [BL-025]
+  - id: BL-027
+    title: "Initialiser Alembic"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-027.md
+    depends_on: [BL-025]
+  - id: BL-028
+    title: "Migrer les tables imports et referentiels"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-028.md
+    depends_on: [BL-027]
+  - id: BL-029
+    title: "Migrer les tables metier importees"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-029.md
+    depends_on: [BL-028]
+  - id: BL-030
+    title: "Implementer repositories Site et Agent"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-030.md
+    depends_on: [BL-029]
+  - id: BL-031
+    title: "Implementer repositories Alias et Affectation"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-031.md
+    depends_on: [BL-030]
+  - id: BL-032
+    title: "Implementer repositories ImportBatch et RejectedRow"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-032.md
+    depends_on: [BL-028]
+  - id: BL-033
+    title: "Implementer repositories Call et CallSegment"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-033.md
+    depends_on: [BL-029, BL-032]
+  - id: BL-034
+    title: "Implementer repository Ticket"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-034.md
+    depends_on: [BL-029, BL-032]
+  - id: BL-035
+    title: "Implementer repository AgentDailyActivity"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-035.md
+    depends_on: [BL-029, BL-032]
+  - id: BL-036
+    title: "Implementer empreintes et detection de doublons"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-036.md
+    depends_on: [BL-032, BL-033, BL-034, BL-035]
+  - id: BL-037
+    title: "Implementer le cas d'usage ImportParsedFile"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-037.md
+    depends_on: [BL-026, BL-032, BL-036]
+  - id: BL-038
+    title: "Implementer la politique de conflit"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-038.md
+    depends_on: [BL-036, BL-037]
+  - id: BL-039
+    title: "Implementer la quarantaine des lignes rejetees"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-039.md
+    depends_on: [BL-032, BL-037]
+  - id: BL-040
+    title: "Implementer l'annulation d'un lot d'import"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-040.md
+    depends_on: [BL-037]
+  - id: BL-041
+    title: "Ajouter les commandes CLI import"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-041.md
+    depends_on: [BL-037, BL-039, BL-040]
+  - id: BL-042
+    title: "Ajouter les commandes CLI referentiels"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-042.md
+    depends_on: [BL-030, BL-031]
+  - id: BL-043
+    title: "Mettre en place les tests d'integration PostgreSQL"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-043.md
+    depends_on: [BL-024, BL-027]
+  - id: BL-044
+    title: "Couvrir l'idempotence par tests d'integration"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-044.md
+    depends_on: [BL-037, BL-043]
+  - id: BL-045
+    title: "Couvrir le rollback par tests d'integration"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-045.md
+    depends_on: [BL-040, BL-043]
+  - id: BL-046
+    title: "Mettre a jour contrats et documentation v0.2.0"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-046.md
+    depends_on: [BL-041, BL-042, BL-044, BL-045]
+  - id: BL-047
+    title: "Finaliser workflow et release report v0.2.0"
+    version_target: v0.2.0
+    priority: P0
+    status: TODO
+    path: docs/backlog/backlogs/BL-047.md
+    depends_on: [BL-046]

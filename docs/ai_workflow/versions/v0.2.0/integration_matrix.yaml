@@ -40,4 +40,8 @@ components:
     status: out_of_scope
   reports:
     status: out_of_scope
+quality:
+  coverage_global: "95% unless changed by ADR"
+  integration_tests: required_for_database
+  pytest_warnings: forbidden
 template_references_forbidden: true

@@ -10,18 +10,18 @@ Glossaire
 
    US
       *User Story*. Expression d'un besoin du point de vue de l'utilisateur
-      (ou de l'IA de développement). Identifiants ``US-001`` à ``US-013`` pour
-      ``v0.1.0``, fichiers dans ``docs/backlog/user_stories/``.
+      (ou de l'IA de développement). Identifiants ``US-001`` à ``US-028``
+      (lots ``v0.1.0`` et ``v0.2.0``), fichiers dans ``docs/backlog/user_stories/``.
 
    FEAT
       *Feature*. Fonctionnalité concrète découpant une ou plusieurs US.
-      Identifiants ``FEAT-XXX.Y`` (ex. ``FEAT-001.1``), fichiers dans
-      ``docs/backlog/features/``.
+      Identifiants ``FEAT-XXX.Y`` (ex. ``FEAT-001.1``, ``FEAT-014.1``), fichiers
+      dans ``docs/backlog/features/``.
 
    BL
       *Backlog de livraison*. Item d'implémentation atomique dérivé des FEAT.
-      Identifiants ``BL-001`` à ``BL-021`` pour ``v0.1.0``, fichiers dans
-      ``docs/backlog/backlogs/``. File d'exécution :
+      Identifiants ``BL-001`` à ``BL-047`` (``v0.1.0`` : 001–021 ; ``v0.2.0`` :
+      022–047), fichiers dans ``docs/backlog/backlogs/``. File d'exécution :
       ``docs/ai_workflow/state/queue.yaml``.
 
    ADR
@@ -30,8 +30,8 @@ Glossaire
       du dépôt ``v0.1.0``).
 
    atpro
-      Nom du package Python livré en ``v0.1.0``. Cœur de parsing CSV, sans
-      persistence ni API web dans ce lot.
+      Nom du package Python. ``v0.1.0`` livre le cœur de parsing CSV ;
+      ``v0.2.0`` y ajoute la persistance PostgreSQL et les imports idempotents.
 
    ParseResult
       Résultat standardisé d'un parsing : enregistrements, erreurs, warnings et
@@ -83,6 +83,11 @@ Glossaire
    Backlog
       Ensemble des items BL à réaliser pour livrer la version. Source unique :
       ``docs/backlog/`` ; suivi via ``queue.yaml`` et ``dependency_graph.yaml``.
+
+   Persistance
+      Couche PostgreSQL / SQLAlchemy / Alembic introduite en ``v0.2.0`` :
+      Unit of Work, repositories, imports idempotents, quarantaine et rollback
+      (voir ``docs/contracts/persistence_contract.md`` et ADR-0002).
 
    Sprint
       Itération de durée fixe (champ *Iteration* du Project) regroupant des
