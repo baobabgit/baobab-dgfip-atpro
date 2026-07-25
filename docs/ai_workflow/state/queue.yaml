@@ -157,7 +157,7 @@ queue:
     title: "Cadrer et cabler les fichiers CSV reels de reference"
     version_target: v0.1.0
     priority: P1
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-021.md
     depends_on: [BL-018, BL-019]
 

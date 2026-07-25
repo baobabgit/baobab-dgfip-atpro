@@ -3,10 +3,10 @@ backlog_id: BL-021
 version_target: v0.1.0
 branch: bl/021-reference-csv
 base_branch: version/v0.1.0
-status: READY_FOR_REVIEW
-step: 06_review
+status: READY_TO_MERGE
+step: 10_merge
 active_role: developpeur
-started_at: "2026-07-25T16:43:05Z"
-updated_at: "2026-07-25T16:47:00Z"
-pr_url: null
-notes: "Implementation FEAT-013.1 + gates verts ; pas de commit (demande explicite)"
+started_at: "2026-07-25T16:45:00Z"
+updated_at: "2026-07-25T16:55:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/36"
+notes: "CI + verdicts GO"
