@@ -3,10 +3,10 @@ backlog_id: BL-009
 version_target: v0.1.0
 branch: bl/009-generic-normalizers
 base_branch: version/v0.1.0
-status: IN_PROGRESS
-step: 03_implementation
+status: READY_TO_MERGE
+step: 10_merge
 active_role: developpeur
 started_at: "2026-07-25T13:41:58Z"
-updated_at: "2026-07-25T13:41:58Z"
-pr_url: null
-notes: "Implementation normalizers generiques FEAT-005.3"
+updated_at: "2026-07-25T13:50:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/24"
+notes: "CI verte + verdicts GO"
