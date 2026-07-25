@@ -6,30 +6,13 @@
 from __future__ import annotations
 
 import hashlib
-from dataclasses import dataclass
 from pathlib import Path
 
 from atpro.domain.value_objects.file_sha256 import FileSha256
+from atpro.parser.detection.stream_digest_result import StreamDigestResult
 
 _CHUNK_SIZE = 1024 * 64
 _SAMPLE_SIZE = 1024 * 64
-
-
-@dataclass(frozen=True, slots=True)
-class StreamDigestResult:
-    """Resultat du passage binaire unique sur le fichier.
-
-    :param sha256: Empreinte hexadecimale.
-    :param size_bytes: Taille lue.
-    :param sample: Echantillon initial pour detection.
-    :param line_count: Nombre de lignes (sauts de ligne comptes).
-    :spec: FEAT-002.1
-    """
-
-    sha256: FileSha256
-    size_bytes: int
-    sample: bytes
-    line_count: int
 
 
 class Sha256Streamer:

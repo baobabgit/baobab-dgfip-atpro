@@ -14,7 +14,8 @@ from atpro.parser.detection.header_normalizer import HeaderNormalizer
 from atpro.parser.detection.header_reader import HeaderReader
 from atpro.parser.detection.separator_detection import SeparatorDetection
 from atpro.parser.detection.separator_detector import SeparatorDetector
-from atpro.parser.detection.sha256_streamer import Sha256Streamer, StreamDigestResult
+from atpro.parser.detection.sha256_streamer import Sha256Streamer
+from atpro.parser.detection.stream_digest_result import StreamDigestResult
 
 __all__ = [
     "EncodingDetection",
