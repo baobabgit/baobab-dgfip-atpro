@@ -134,6 +134,12 @@ class TestIncomingCallsReader:
             encoding="utf-8",
         )
         result = IncomingCallsReader().read(path)
+        assert any(w.issue.code == "SCHEMA_NOT_INCOMING" for w in result.warnings)
+
+    def test_FEAT_005_4_unknown_columns_error(self, tmp_path: Path) -> None:
+        path = tmp_path / "inconnu.csv"
+        path.write_text("ColA;ColB\nx;y\n", encoding="utf-8")
+        result = IncomingCallsReader().read(path)
         assert any(e.issue.code == "SCHEMA_INCOMING_REQUIRED" for e in result.errors)
 
     def test_FEAT_005_4_outgoing_schema_warns(self, tmp_path: Path) -> None:
@@ -146,4 +152,16 @@ class TestIncomingCallsReader:
             encoding="utf-8",
         )
         result = IncomingCallsReader().read(path)
+        assert any(w.issue.code == "SCHEMA_NOT_INCOMING" for w in result.warnings)
+
+    def test_FEAT_005_4_read_rows_non_incoming_schema(self) -> None:
+        rows = [
+            {
+                "Numero Ticket": "T1",
+                "Date-Heure Creation Ticket": "15/06/2026 10:00:00",
+                "Statut Ticket": "Ouvert",
+                "Site Repartition Ticket": "Site A",
+            }
+        ]
+        result = IncomingCallsReader().read_rows(rows)
         assert any(w.issue.code == "SCHEMA_NOT_INCOMING" for w in result.warnings)
