@@ -1,0 +1,4 @@
+ID de l'appel;Numero appelant;Numero appele;Nom de l'agent;Debut d'appel;Fin d'appel;Noms de mesures;Valeurs de mesures
+O100;;0142000000;Alice DUPONT;15/06/2026 14:00:00;15/06/2026 14:03:00;Duree de communication;90
+O100;;0142000000;Alice DUPONT;15/06/2026 14:00:00;15/06/2026 14:03:00;Duree de mise en garde;15
+O101;;0142000001;Bob MARTIN;15/06/2026 15:00:00;15/06/2026 15:01:00;Duree de communication;45
