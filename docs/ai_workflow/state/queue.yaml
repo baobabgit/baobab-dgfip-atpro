@@ -101,7 +101,7 @@ queue:
     title: "Implementer reader appels sortants"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-013.md
     depends_on: [BL-011]
   - id: BL-014
