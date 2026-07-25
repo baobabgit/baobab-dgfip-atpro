@@ -19,7 +19,10 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
+    "alembic>=1.14",
+    "psycopg[binary]>=3.2",
     "pydantic-settings>=2.14.2",
+    "sqlalchemy>=2.0",
     "typer>=0.27.0",
     "tzdata>=2026.3",
 ]
@@ -107,6 +110,8 @@ python_classes = ["Test*"]
 python_functions = ["test_*"]
 markers = [
     "reference: tests optionnels utilisant les CSV reels de reference",
+    "postgres: tests necessitant une instance PostgreSQL disponible",
+    "integration: tests d'integration hors unitaire pur",
 ]
 
 [tool.coverage.run]
