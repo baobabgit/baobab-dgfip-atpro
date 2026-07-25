@@ -3,10 +3,10 @@ backlog_id: BL-011
 version_target: v0.1.0
 branch: bl/011-calls-common-reader
 base_branch: version/v0.1.0
-status: IN_PROGRESS
-step: 03_implementation
+status: READY_TO_MERGE
+step: 10_merge
 active_role: developpeur
 started_at: "2026-07-25T13:49:59Z"
-updated_at: "2026-07-25T13:49:59Z"
-pr_url: null
-notes: "Composant commun consolidation appels"
+updated_at: "2026-07-25T13:55:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/26"
+notes: "CI + verdicts GO"

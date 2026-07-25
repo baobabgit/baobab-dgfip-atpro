@@ -87,14 +87,14 @@ queue:
     title: "Implementer reader appels commun"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-011.md
     depends_on: [BL-005, BL-006, BL-009, BL-010]
   - id: BL-012
     title: "Implementer reader appels entrants"
     version_target: v0.1.0
     priority: P0
-    status: TODO
+    status: READY
     path: docs/backlog/backlogs/BL-012.md
     depends_on: [BL-011]
   - id: BL-013
