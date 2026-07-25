@@ -5,6 +5,6 @@
 
 from __future__ import annotations
 
-from atpro.infrastructure import config
+from atpro.infrastructure import config, database
 
-__all__: list[str] = ["config"]
+__all__: list[str] = ["config", "database"]
