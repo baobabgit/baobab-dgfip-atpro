@@ -8,13 +8,13 @@
 #
 # Tout outil actif doit mettre à jour last_heartbeat_at et expires_at régulièrement.
 
-locked: true
-active_run: BL-014
-active_role: developpeur
-active_tool: cursor
-branch: bl/014-tickets-reader
-locked_at: "'@$now@'"
-last_heartbeat_at: "'@$now@'"
-expires_at: "'@$exp@'"
+locked: false
+active_run: null
+active_role: null
+active_tool: null
+branch: null
+locked_at: null
+last_heartbeat_at: "2026-07-25T14:15:00Z"
+expires_at: null
 lease_duration_minutes: 120
-status: BUSY
+status: IDLE

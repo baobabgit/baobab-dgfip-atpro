@@ -108,7 +108,7 @@ queue:
     title: "Implementer reader tickets"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-014.md
     depends_on: [BL-005, BL-006, BL-009, BL-010]
   - id: BL-015
