@@ -27,6 +27,7 @@ class TestDomainEnums:
     def test_FEAT_005_2_parse_and_severity(self) -> None:
         assert ParseStatus.SUCCESS == "success"
         assert ImportSeverity.ERROR == "error"
+        assert ImportSeverity.FATAL == "fatal"
 
     def test_FEAT_005_2_period_scope_schema(self) -> None:
         assert PeriodType.DAY == "day"

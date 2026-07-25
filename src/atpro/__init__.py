@@ -5,8 +5,8 @@
 
 from __future__ import annotations
 
-from atpro import domain
+from atpro import domain, parser
 
-__all__: list[str] = ["__version__", "domain"]
+__all__: list[str] = ["__version__", "domain", "parser"]
 
 __version__: str = "0.1.0"

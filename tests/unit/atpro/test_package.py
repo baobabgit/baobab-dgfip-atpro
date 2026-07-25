@@ -14,4 +14,5 @@ class TestAtproPackage:
         assert atpro.__version__ == "0.1.0"
         assert "__version__" in atpro.__all__
         assert "domain" in atpro.__all__
+        assert "parser" in atpro.__all__
         assert domain.__name__ == "atpro.domain"
