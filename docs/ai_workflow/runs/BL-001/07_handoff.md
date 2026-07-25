@@ -2,16 +2,8 @@
 
 ## Etat
 
-IN_PROGRESS — preparation commit / PR.
-
-## Fait
-
-- ADR-0001 redige et aligne AGENTS.md + CDC
-- Artefacts backlog/version/contrats prepares
+MERGED vers `version/v0.1.0`.
 
 ## Suite
 
-1. Commit `BL-001: ...`
-2. Push + PR vers `version/v0.1.0`
-3. CI + revue
-4. Merge puis demarrer BL-002
+Demarrer BL-002 (package `atpro`).
