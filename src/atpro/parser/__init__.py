@@ -5,6 +5,6 @@
 
 from __future__ import annotations
 
-from atpro.parser import results
+from atpro.parser import detection, results
 
-__all__ = ["results"]
+__all__ = ["detection", "results"]

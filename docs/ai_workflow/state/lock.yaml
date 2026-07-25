@@ -16,5 +16,5 @@ branch: null
 locked_at: null
 last_heartbeat_at: null
 expires_at: null
-lease_duration_minutes: 15
+lease_duration_minutes: 120
 status: IDLE
