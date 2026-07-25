@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 from atpro.parser import (
+    activities,
     calls,
     detection,
     normalizers,
@@ -16,6 +17,7 @@ from atpro.parser import (
 )
 
 __all__ = [
+    "activities",
     "calls",
     "detection",
     "normalizers",
