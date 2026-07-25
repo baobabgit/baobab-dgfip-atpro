@@ -17,3 +17,4 @@ class ImportSeverity(StrEnum):
     ERROR = "error"
     WARNING = "warning"
     INFO = "info"
+    FATAL = "fatal"
