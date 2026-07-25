@@ -1,9 +1,12 @@
 # Review — BL-025
 
-## Verdict TESTER : (apres CI)
+## Verdict TESTER : GO
 
-A completer apres CI verte.
+Criteres FEAT-016.1 / BL-025 evalues ; CI PR #45 verte.
 
-## Verdict REVIEWER : (apres CI)
+## Verdict REVIEWER : GO
 
-A completer apres CI verte.
+Diff limite a `infrastructure.database` + tests. Alignement ADR-0002.
+Sessions injectables, pas de connexion a l'import.
+
+Commentaire PR : https://github.com/baobabgit/baobab-dgfip-atpro/pull/45#issuecomment-5080809251

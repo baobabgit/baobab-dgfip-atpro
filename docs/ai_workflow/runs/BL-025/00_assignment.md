@@ -7,4 +7,4 @@
 - **Base** : `version/v0.2.0`
 - **FEAT** : FEAT-016.1
 - **US** : US-016
-- **PR** : (a renseigner apres ouverture)
+- **PR** : https://github.com/baobabgit/baobab-dgfip-atpro/pull/45
