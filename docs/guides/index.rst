@@ -16,6 +16,8 @@ Organisés selon la taxonomie **Diátaxis** :
    :maxdepth: 2
    :caption: How-to
 
+   how-to/cli-file
+   how-to/perimetre-v010
    how-to/ajouter-une-classe
    how-to/integration-validation
    how-to/template-sync

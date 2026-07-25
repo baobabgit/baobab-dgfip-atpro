@@ -1,26 +1,68 @@
-Premiers pas
-============
+Premiers pas avec atpro
+=======================
 
-Ce tutoriel met en place l'environnement de développement et lance les tests.
+Ce tutoriel installe le package ``atpro`` (v0.1.0) et vérifie le parseur CSV
+via le CLI et les tests.
 
-#. **Créer l'environnement virtuel** ::
+Prérequis
+---------
 
-      python -m venv .venv
+* Python 3.13
+* `uv <https://docs.astral.sh/uv/>`_
 
-#. **Activer l'environnement**
+Installation
+------------
 
-   * Windows (PowerShell) : ``.venv\Scripts\Activate.ps1``
-   * Linux / macOS : ``source .venv/bin/activate``
+::
 
-#. **Installer le projet et les outils** ::
+   git clone https://github.com/baobabgit/baobab-dgfip-atpro.git
+   cd baobab-dgfip-atpro
+   make install
 
-      pip install -e ".[dev,docs]"
-      pre-commit install
+Sous Windows sans ``make`` ::
 
-#. **Vérifier que tout passe** ::
+   uv sync
+   uv run pre-commit install
 
-      ruff check .
-      mypy
-      pytest
+Vérifier le CLI
+---------------
 
-Vous obtenez une couverture de tests supérieure à 90 % : l'environnement est prêt.
+::
+
+   uv run atpro file inspect tests/fixtures/csv/incoming_calls_valid.csv
+   uv run atpro file validate tests/fixtures/csv/incoming_calls_valid.csv --json
+   uv run atpro file preview tests/fixtures/csv/incoming_calls_valid.csv --limit 5
+
+API Python minimale
+-------------------
+
+::
+
+   from pathlib import Path
+   from atpro.parser import ParseFileUseCase
+
+   result = ParseFileUseCase().parse(Path("tests/fixtures/csv/incoming_calls_valid.csv"))
+   print(result.summary.status)
+
+Qualité
+-------
+
+::
+
+   make all
+
+Ou ::
+
+   uv run black --check src tests
+   uv run ruff check src tests
+   uv run mypy src
+   uv run pytest -q --cov=src --cov-fail-under=95
+
+La couverture doit rester ≥ 95 %.
+
+Suite
+-----
+
+* CLI détaillé : ``docs/guides/how-to/cli-file.rst``
+* Périmètre / limites : ``docs/guides/how-to/perimetre-v010.rst``
+* Contrats : ``docs/contracts/``

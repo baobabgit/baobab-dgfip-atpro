@@ -1,0 +1,11 @@
+run_id: BL-020
+backlog_id: BL-020
+version_target: v0.1.0
+branch: bl/020-document-v010
+base_branch: version/v0.1.0
+status: IMPLEMENTATION_DONE
+step: 05_tests_report
+active_role: developpeur
+started_at: "2026-07-25T16:37:10Z"
+updated_at: "2026-07-25T16:45:00Z"
+notes: "Documentation v0.1.0 livree ; gates verts ; pas de commit"

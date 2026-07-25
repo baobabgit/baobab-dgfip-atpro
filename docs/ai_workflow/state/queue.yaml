@@ -150,7 +150,7 @@ queue:
     title: "Documenter le lot v0.1.0"
     version_target: v0.1.0
     priority: P1
-    status: TODO
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-020.md
     depends_on: [BL-001, BL-019]
   - id: BL-021
@@ -160,6 +160,7 @@ queue:
     status: TODO
     path: docs/backlog/backlogs/BL-021.md
     depends_on: [BL-018, BL-019]
+
 
 
 

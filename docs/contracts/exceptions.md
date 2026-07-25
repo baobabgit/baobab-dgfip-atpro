@@ -1,14 +1,28 @@
 # Contrat — Exceptions publiques
 
-> Exceptions publiques de ce package.
+> Exceptions et diagnostics publics du package `atpro` (v0.1.0).
 
-## Exceptions déclarées (cible v0.1.0)
+## Exceptions Python
 
-Les exceptions métier de parsing (erreurs, warnings structurés) sont définies
-avec le lot ``v0.1.0``. Voir [`parser_contract.md`](parser_contract.md) et
-[`public_api.md`](public_api.md).
+| Classe | Module | Usage |
+|---|---|---|
+| `DomainError` | `atpro.domain.exceptions` | Erreurs métier domaine (validation modèles) |
+| `FileDetectionError` | `atpro.parser.detection` | Fichier absent, vide, illisible |
+| `NormalizationError` | `atpro.parser.normalizers` | Valeur CSV non normalisable |
 
-## Notes
+## Diagnostics structurés (pas des exceptions)
 
-Les exceptions publiques font partie du contrat API. Tout changement de leur
-liste ou de leurs signatures est soumis aux règles SemVer.
+| Classe | Module | Usage |
+|---|---|---|
+| `ParseIssue` | `atpro.parser.results` | Code + message + sévérité + ligne |
+| `ImportError` | `atpro.parser.results` | Erreur d'import (ERROR / FATAL) |
+| `ImportWarning` | `atpro.parser.results` | Avertissement d'import |
+
+Le CLI mappe ces diagnostics vers des codes de sortie (`ExitCode`) — voir
+[`cli_contract.md`](cli_contract.md).
+
+## Notes SemVer
+
+Les exceptions et codes d'issue publics font partie du contrat API. Tout
+changement incompatible (suppression de code, rupture de signature) est soumis
+aux règles SemVer décrites dans [`compatibility.md`](compatibility.md).
