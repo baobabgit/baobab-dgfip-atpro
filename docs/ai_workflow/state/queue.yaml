@@ -155,7 +155,7 @@ queue:
     title: "Rediger l'ADR de persistance v0.2.0"
     version_target: v0.2.0
     priority: P0
-    status: READY
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-022.md
     depends_on: [BL-021]
   - id: BL-023

@@ -1,0 +1,12 @@
+run_id: BL-022
+backlog_id: BL-022
+version_target: v0.2.0
+branch: bl/022-adr-persistance
+base_branch: version/v0.2.0
+status: IN_PROGRESS
+step: 03_implement
+active_role: architecte
+started_at: "2026-07-25T21:31:44Z"
+updated_at: "2026-07-25T21:40:00Z"
+pr_url: null
+notes: "ADR-0002 redigee — gates et PR a suivre"
