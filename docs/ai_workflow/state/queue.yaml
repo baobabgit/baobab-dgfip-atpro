@@ -59,7 +59,7 @@ queue:
     title: "Implementer detection fichier"
     version_target: v0.1.0
     priority: P0
-    status: READY
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-007.md
     depends_on: [BL-006]
   - id: BL-008
