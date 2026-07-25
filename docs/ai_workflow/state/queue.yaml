@@ -122,7 +122,7 @@ queue:
     title: "Implementer orchestrateur de parsing"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-016.md
     depends_on: [BL-007, BL-008, BL-012, BL-013, BL-014, BL-015]
   - id: BL-017
