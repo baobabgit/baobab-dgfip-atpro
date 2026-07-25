@@ -6,7 +6,7 @@ from pathlib import Path
 # Rend le package importable pour autodoc (layout src/).
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-project = "example-package"
+project = "atpro"
 author = "Michel ANDRIANAIVO"
 release = "0.1.0"
 

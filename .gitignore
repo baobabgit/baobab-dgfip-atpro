@@ -8,6 +8,10 @@ env/
 .env.*
 !.env.example
 
+# CSV reels / exports sensibles (jamais versionnes)
+samples/reference/*.csv
+sources/
+
 # Python
 __pycache__/
 *.py[cod]

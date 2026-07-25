@@ -7,4 +7,4 @@ Documentation générée automatiquement depuis les docstrings (reStructuredText
    :toctree: _autosummary
    :recursive:
 
-   example_package
+   atpro

@@ -1,12 +1,45 @@
-# Graphe de dépendances entre backlogs
-# Mis à jour par le Découpeur backlog.
-# Utilisé par l'Orchestrateur pour la sélection du prochain backlog.
-
-backlogs: []
-# Exemple :
-# - id: BL-002
-#   depends_on:
-#     - BL-001
-#   blocks:
-#     - BL-003
-#     - BL-004
+version: 1
+release: v0.1.0
+nodes:
+  - BL-001
+  - BL-002
+  - BL-003
+  - BL-004
+  - BL-005
+  - BL-006
+  - BL-007
+  - BL-008
+  - BL-009
+  - BL-010
+  - BL-011
+  - BL-012
+  - BL-013
+  - BL-014
+  - BL-015
+  - BL-016
+  - BL-017
+  - BL-018
+  - BL-019
+  - BL-020
+  - BL-021
+edges:
+  BL-002: [BL-001]
+  BL-003: [BL-002]
+  BL-004: [BL-003]
+  BL-005: [BL-004]
+  BL-006: [BL-004]
+  BL-007: [BL-006]
+  BL-008: [BL-007]
+  BL-009: [BL-004, BL-006]
+  BL-010: [BL-009]
+  BL-011: [BL-005, BL-006, BL-009, BL-010]
+  BL-012: [BL-011]
+  BL-013: [BL-011]
+  BL-014: [BL-005, BL-006, BL-009, BL-010]
+  BL-015: [BL-005, BL-006, BL-009, BL-010]
+  BL-016: [BL-007, BL-008, BL-012, BL-013, BL-014, BL-015]
+  BL-017: [BL-016]
+  BL-018: [BL-008]
+  BL-019: [BL-012, BL-013, BL-014, BL-015, BL-016, BL-017, BL-018]
+  BL-020: [BL-001, BL-019]
+  BL-021: [BL-018, BL-019]

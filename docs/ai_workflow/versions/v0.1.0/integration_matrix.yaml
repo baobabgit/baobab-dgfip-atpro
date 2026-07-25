@@ -1,0 +1,84 @@
+version: v0.1.0
+package: atpro
+integrations:
+  domain:
+    provides:
+      - Site
+      - Agent
+      - AgentAlias
+      - AgentSiteAssignment
+      - Call
+      - CallSegment
+      - Ticket
+      - AgentDailyActivity
+      - domain enums
+      - domain value objects
+    consumed_by:
+      - parser
+      - cli
+    status: delivered
+  parser:
+    provides:
+      - FileInspection
+      - SchemaDetector
+      - ParseFileUseCase
+      - CSV readers
+      - ParseIssue
+      - ImportWarning
+      - ImportError
+      - ParseSummary
+      - FileMetadata
+      - ParseResult
+      - ParsePreview
+    consumed_by:
+      - cli
+    status: delivered
+  cli:
+    provides:
+      - atpro file inspect
+      - atpro file validate
+      - atpro file preview
+    consumes:
+      - parser
+      - domain
+    status: delivered
+  reference_data:
+    provides:
+      - docs/reference-data.md
+      - tests/fixtures/csv
+      - optional ATPRO_REFERENCE_CSV_DIR validation
+    consumes:
+      - parser
+    status: delivered
+status:
+  postgres: out_of_scope
+  fastapi: out_of_scope
+  react: out_of_scope
+  docker_app: out_of_scope
+  quarkdown: out_of_scope
+progress:
+  done:
+    [
+      BL-001,
+      BL-002,
+      BL-003,
+      BL-004,
+      BL-005,
+      BL-006,
+      BL-007,
+      BL-008,
+      BL-009,
+      BL-010,
+      BL-011,
+      BL-012,
+      BL-013,
+      BL-014,
+      BL-015,
+      BL-016,
+      BL-017,
+      BL-018,
+      BL-019,
+      BL-020,
+      BL-021,
+    ]
+  next: null

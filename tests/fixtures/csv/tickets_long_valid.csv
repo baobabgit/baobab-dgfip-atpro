@@ -1,0 +1,3 @@
+Numero Ticket;Date-Heure Creation Ticket;Date-Heure Prise en Charge Ticket;Date-Heure Resolution Ticket;Date-Heure Cloture Ticket;Statut Ticket;Site Repartition Ticket;Canal;Priorite;Agent Qualification;Agent Resolution;Agent Cloture;Groupe;Domaine;Nature Ticket;Type Ticket;Telephone Contact
+T100;15/06/2026 10:00:00;15/06/2026 10:05:00;15/06/2026 11:00:00;15/06/2026 11:30:00;Clos;Site Paris;Telephone;Haute;Alice DUPONT;Bob MARTIN;Alice DUPONT;Groupe N1;Fiscal;Demande;Standard;0611111111
+T101;15/06/2026 09:00:00;15/06/2026 09:10:00;;;Ouvert;Site Lyon;Mail;Normale;Alice DUPONT;;;Groupe N2;RH;Question;Standard;

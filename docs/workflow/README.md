@@ -13,7 +13,7 @@ dépôt et du GitHub Project.
 
 | Source | Boucle | Rôle d'entrée |
 | --- | --- | --- |
-| Cahier des charges (`docs/specifications/cahier-des-charges/`) | Construction | Product Owner |
+| Cahier des charges (`docs/specifications/000_cahier-des-charges/`) | Construction | Product Owner |
 | Signalement utilisateur | Maintenance | Support |
 | Demande d'un projet/sous-projet externe | Construction ou Maintenance | PO ou Mainteneur (champ `:origin:`) |
 

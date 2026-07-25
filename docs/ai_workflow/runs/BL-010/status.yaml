@@ -1,0 +1,12 @@
+run_id: BL-010
+backlog_id: BL-010
+version_target: v0.1.0
+branch: bl/010-identity-normalizers
+base_branch: version/v0.1.0
+status: READY_TO_MERGE
+step: 10_merge
+active_role: developpeur
+started_at: "2026-07-25T13:46:30Z"
+updated_at: "2026-07-25T13:52:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/25"
+notes: "CI + verdicts GO"

@@ -1,0 +1,4 @@
+ID de l'appel;Numero appelant;Numero appele;Nom de l'agent;Debut d'appel;Fin d'appel;Flux;Service;Noms de mesures;Valeurs de mesures
+A100;0611111111;0142000000;Alice DUPONT;15/06/2026 10:00:00;15/06/2026 10:05:00;Flux Standard;Service Accueil;Duree de communication;120
+A100;0611111111;0142000000;Alice DUPONT;15/06/2026 10:00:00;15/06/2026 10:05:00;Flux Standard;Service Accueil;Duree de mise en garde;30
+A101;0622222222;0142000001;Bob MARTIN;15/06/2026 11:00:00;15/06/2026 11:02:00;Flux Standard;Service Accueil;Duree de communication;90

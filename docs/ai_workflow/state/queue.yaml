@@ -7,14 +7,164 @@
 #   5. risque à réduire
 #   6. effort raisonnable
 #   7. absence de blocage d'intégration
+#
+# Graphe de dépendances : dependency_graph.yaml
 
-version_active: null
+version_active: v0.1.0
 
-queue: []
-# Exemple d'entrée :
-# - id: BL-001
-#   title: "Initialiser la structure du package"
-#   version_target: v0.1.0
-#   priority: P0
-#   status: TODO
-#   depends_on: []
+queue:
+  - id: BL-001
+    title: "Lire le contexte et ouvrir l'ADR depot"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-001.md
+    depends_on: []
+  - id: BL-002
+    title: "Nettoyer le squelette template"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-002.md
+    depends_on: [BL-001]
+  - id: BL-003
+    title: "Initialiser l'arborescence du domaine"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-003.md
+    depends_on: [BL-002]
+  - id: BL-004
+    title: "Implementer enums et value objects"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-004.md
+    depends_on: [BL-003]
+  - id: BL-005
+    title: "Implementer les modeles metier"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-005.md
+    depends_on: [BL-004]
+  - id: BL-006
+    title: "Implementer erreurs, warnings et resultats"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-006.md
+    depends_on: [BL-004]
+  - id: BL-007
+    title: "Implementer detection fichier"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-007.md
+    depends_on: [BL-006]
+  - id: BL-008
+    title: "Implementer registre de schemas"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-008.md
+    depends_on: [BL-007]
+  - id: BL-009
+    title: "Implementer normalizers generiques"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-009.md
+    depends_on: [BL-004, BL-006]
+  - id: BL-010
+    title: "Implementer normalizers agents et sites"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-010.md
+    depends_on: [BL-009]
+  - id: BL-011
+    title: "Implementer reader appels commun"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-011.md
+    depends_on: [BL-005, BL-006, BL-009, BL-010]
+  - id: BL-012
+    title: "Implementer reader appels entrants"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-012.md
+    depends_on: [BL-011]
+  - id: BL-013
+    title: "Implementer reader appels sortants"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-013.md
+    depends_on: [BL-011]
+  - id: BL-014
+    title: "Implementer reader tickets"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-014.md
+    depends_on: [BL-005, BL-006, BL-009, BL-010]
+  - id: BL-015
+    title: "Implementer readers activites agents"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-015.md
+    depends_on: [BL-005, BL-006, BL-009, BL-010]
+  - id: BL-016
+    title: "Implementer orchestrateur de parsing"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-016.md
+    depends_on: [BL-007, BL-008, BL-012, BL-013, BL-014, BL-015]
+  - id: BL-017
+    title: "Implementer CLI minimal"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-017.md
+    depends_on: [BL-016]
+  - id: BL-018
+    title: "Creer fixtures anonymisees"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-018.md
+    depends_on: [BL-008]
+  - id: BL-019
+    title: "Couvrir les tests de non-regression parseurs"
+    version_target: v0.1.0
+    priority: P0
+    status: DONE
+    path: docs/backlog/backlogs/BL-019.md
+    depends_on: [BL-012, BL-013, BL-014, BL-015, BL-016, BL-017, BL-018]
+  - id: BL-020
+    title: "Documenter le lot v0.1.0"
+    version_target: v0.1.0
+    priority: P1
+    status: DONE
+    path: docs/backlog/backlogs/BL-020.md
+    depends_on: [BL-001, BL-019]
+  - id: BL-021
+    title: "Cadrer et cabler les fichiers CSV reels de reference"
+    version_target: v0.1.0
+    priority: P1
+    status: DONE
+    path: docs/backlog/backlogs/BL-021.md
+    depends_on: [BL-018, BL-019]
+
+
+
+
+
+
+
+

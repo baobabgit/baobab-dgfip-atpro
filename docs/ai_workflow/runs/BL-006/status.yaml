@@ -1,0 +1,12 @@
+run_id: BL-006
+backlog_id: BL-006
+version_target: v0.1.0
+branch: bl/006-parse-results
+base_branch: version/v0.1.0
+status: MERGED
+step: 12_merged
+active_role: developpeur
+started_at: "2026-07-25T11:52:11Z"
+updated_at: "2026-07-25T11:54:37Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/14"
+notes: "Merge squash vers version/v0.1.0 — diagnostics et ParseResult"

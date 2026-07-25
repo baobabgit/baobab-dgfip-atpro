@@ -1,9 +1,10 @@
 Documentation du projet
 =======================
 
-Bienvenue dans la documentation. Elle est organisée en trois axes :
+Bienvenue dans la documentation. Elle est organisée en quatre axes :
 
 * **Spécifications** — le cahier des charges (User Stories et Features).
+* **Backlog** — fiches US / FEAT / BL opérationnelles (AGENTS).
 * **Guides** — tutoriels et how-to (taxonomie Diátaxis).
 * **API** — référence technique générée depuis les docstrings.
 
@@ -12,6 +13,7 @@ Bienvenue dans la documentation. Elle est organisée en trois axes :
    :caption: Sommaire
 
    specifications/index
+   backlog/index
    guides/index
    api/index
 

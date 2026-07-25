@@ -1,8 +1,22 @@
 # Contrat — Services publics
 
-> Services (classes avec logique métier) exposés publiquement.
+> Services (classes avec logique métier) exposés pour `v0.1.0`.
 
-<!-- Documenter ici les services publics une fois créés. -->
+## Services / cas d'usage
 
-Aucun service public pour l'instant (les exemples `Greeter` et `Repository`
-servent de démonstration des patterns du template).
+| Classe | Module | Rôle |
+|---|---|---|
+| `ParseFileUseCase` | `atpro.parser` | Orchestrateur inspect / parse / preview |
+| `FileCliService` | `atpro.interfaces.cli.file_cli_service` | Adaptation CLI → use case |
+| `SchemaRegistry` | `atpro.parser.schemas` | Catalogue des schémas CSV |
+| `SchemaDetector` | `atpro.parser.schemas` | Détection de schéma |
+| `FileInspector` | `atpro.parser.detection` | Inspection bas niveau |
+
+Readers et normalizers : voir [`parser_contract.md`](parser_contract.md).  
+CLI : voir [`cli_contract.md`](cli_contract.md).  
+API publique : voir [`public_api.md`](public_api.md).
+
+## Hors services v0.1.0
+
+Services HTTP, accès SQL / persistence, calculateurs statistiques, générateurs de
+rapports.
