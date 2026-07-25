@@ -80,6 +80,9 @@ def main() -> int:
     adr_0001 = ROOT / "docs/architecture/adr/ADR-0001-structure-depot-v010.md"
     require(adr_0001.exists(), "ADR-0001 manquante dans docs/architecture/adr", errors)
 
+    adr_0002 = ROOT / "docs/architecture/adr/ADR-0002-persistance-postgresql-v020.md"
+    require(adr_0002.exists(), "ADR-0002 manquante dans docs/architecture/adr", errors)
+
     queue = ROOT / "docs/ai_workflow/state/queue.yaml"
     require(queue.exists(), "docs/ai_workflow/state/queue.yaml manquant", errors)
 

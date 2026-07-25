@@ -14,7 +14,7 @@ active_role: architecte
 active_tool: cursor
 branch: bl/022-adr-persistance
 locked_at: "2026-07-25T21:31:44Z"
-last_heartbeat_at: "2026-07-25T21:31:44Z"
-expires_at: "2026-07-25T23:31:44Z"
+last_heartbeat_at: "2026-07-25T21:40:00Z"
+expires_at: "2026-07-25T23:40:00Z"
 lease_duration_minutes: 120
 status: BUSY
