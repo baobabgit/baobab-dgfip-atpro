@@ -1,38 +1,25 @@
 # Contrat public Python v0.1.0
 
 Package : `atpro`  
-Version cible : `v0.1.0`
+Version cible : `v0.1.0`  
+Référence : FEAT-001.2 / FEAT-002.4 / FEAT-005.1
 
 ## Objectif
 
-Ce contrat remplace le contrat template. Il decrit l'API publique attendue du package `atpro` pour le lot `v0.1.0`.
+Décrire l'API publique stable du package `atpro` pour le lot `v0.1.0`
+(parseurs CSV + modèles métier + CLI fichier). Aucune référence au squelette
+template.
 
-## Modules publics attendus
+## Modules publics
 
 ```text
-atpro.domain
-atpro.parser
-atpro.interfaces.cli
+atpro                  # __version__, domain, parser, interfaces
+atpro.domain           # modèles et enums métier
+atpro.parser           # ParseFileUseCase + sous-packages
+atpro.interfaces.cli   # app Typer (console_scripts: atpro)
 ```
 
-## Modeles publics attendus
-
-Le package doit exposer ou rendre importables les modeles suivants :
-
-- `Site`
-- `Agent`
-- `AgentAlias`
-- `AgentSiteAssignment`
-- `Call`
-- `CallSegment`
-- `Ticket`
-- `AgentDailyActivity`
-- `FileMetadata`
-- `ParseResult`
-- `ParsePreview`
-- `ParseIssue`
-
-## Cas d'usage public attendu
+## Cas d'usage public
 
 ```python
 from pathlib import Path
@@ -45,17 +32,50 @@ result = use_case.parse(Path("appels.csv"))
 preview = use_case.preview(Path("appels.csv"), limit=10)
 ```
 
+Méthodes de `ParseFileUseCase` :
+
+| Méthode | Retour | Rôle |
+|---|---|---|
+| `inspect(path)` | `FileInspection` | Type, schéma, encodage, séparateur |
+| `parse(path)` / `validate(path)` | `ParseResult` | Parsing / validation complète |
+| `preview(path, limit=10)` | `ParsePreview` | Aperçu borné |
+
+## Imports de modèles (chemins garantis)
+
+```python
+from atpro.domain.sites import Site
+from atpro.domain.agents import Agent, AgentAlias, AgentSiteAssignment
+from atpro.domain.calls import Call, CallSegment
+from atpro.domain.tickets import Ticket
+from atpro.domain.activities import AgentDailyActivity
+
+from atpro.parser.results import (
+    FileMetadata,
+    ParseIssue,
+    ParsePreview,
+    ParseResult,
+    ParseSummary,
+    ImportError,
+    ImportWarning,
+)
+from atpro.parser.detection import FileInspection, FileDetectionError
+from atpro.parser import ParseFileUseCase
+```
+
+Détail des modèles : [`models.md`](models.md).  
+Détail parseur : [`parser_contract.md`](parser_contract.md).  
+Détail CLI : [`cli_contract.md`](cli_contract.md).
+
 ## Contraintes
 
-- Le domaine ne depend pas de SQLAlchemy, FastAPI, Typer, Polars ou Quarkdown.
-- Le parsing ne depend pas de PostgreSQL.
-- Les resultats sont serialisables.
-- Les erreurs sont structurees et testables.
+- Le domaine ne dépend pas de SQLAlchemy, FastAPI, Typer, Polars ou Quarkdown.
+- Le parsing ne dépend pas de PostgreSQL.
+- Les résultats (`ParseResult`, `ParsePreview`, diagnostics) sont sérialisables.
+- Les erreurs sont structurées et testables (`ParseIssue`, codes stables).
 
 ## Hors contrat v0.1.0
 
 - API HTTP ;
-- persistence ;
-- statistiques ;
-- rapports ;
+- persistence / base de données ;
+- statistiques et rapports ;
 - interface React.

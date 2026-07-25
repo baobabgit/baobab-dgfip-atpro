@@ -4,21 +4,25 @@ contracts:
   public_api: docs/contracts/public_api.md
   parser: docs/contracts/parser_contract.md
   cli: docs/contracts/cli_contract.md
+  models: docs/contracts/models.md
 components:
   domain:
-    status: planned
+    status: delivered
     public: true
     depends_on: []
+    notes: "Modeles Site, Agent, Call, CallSegment, Ticket, AgentDailyActivity"
   parser:
-    status: planned
+    status: delivered
     public: true
     depends_on:
       - domain
+    notes: "ParseFileUseCase, schemas, readers, normalizers, ParseResult"
   cli:
-    status: planned
+    status: delivered
     public: true
     depends_on:
       - parser
+    notes: "atpro file inspect|validate|preview (FEAT-002.5)"
   database:
     status: out_of_scope
   api:
