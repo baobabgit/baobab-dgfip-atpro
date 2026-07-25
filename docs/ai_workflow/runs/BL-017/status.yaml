@@ -1,0 +1,12 @@
+run_id: BL-017
+backlog_id: BL-017
+version_target: v0.1.0
+branch: bl/017-cli-minimal
+base_branch: version/v0.1.0
+status: GATES_GREEN
+step: 05_tests
+active_role: developpeur
+started_at: "2026-07-25T16:18:17Z"
+updated_at: "2026-07-25T16:35:00Z"
+pr_url: ""
+notes: "CLI Typer livree, gates vertes, pas de commit"

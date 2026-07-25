@@ -20,6 +20,7 @@ classifiers = [
 ]
 dependencies = [
     "pydantic-settings>=2.14.2",
+    "typer>=0.27.0",
     "tzdata>=2026.3",
 ]
 
@@ -28,6 +29,9 @@ Homepage = "https://github.com/baobabgit/baobab-dgfip-atpro"
 Repository = "https://github.com/baobabgit/baobab-dgfip-atpro"
 Documentation = "https://github.com/baobabgit/baobab-dgfip-atpro"
 Issues = "https://github.com/baobabgit/baobab-dgfip-atpro/issues"
+
+[project.scripts]
+atpro = "atpro.interfaces.cli.app:run"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/atpro"]
