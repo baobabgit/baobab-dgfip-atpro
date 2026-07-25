@@ -6,4 +6,4 @@
 - **Branche** : `bl/026-unit-of-work`
 - **Base** : `version/v0.2.0`
 - **FEAT** : FEAT-016.2
-- **US** : US-016
+- **PR** : https://github.com/baobabgit/baobab-dgfip-atpro/pull/47

@@ -3,10 +3,10 @@ backlog_id: BL-026
 version_target: v0.2.0
 branch: bl/026-unit-of-work
 base_branch: version/v0.2.0
-status: IN_PROGRESS
-step: 03_implement
+status: MERGED
+step: 11_done
 active_role: developpeur
 started_at: "2026-07-25T22:22:00Z"
-updated_at: "2026-07-25T22:25:00Z"
-pr_url: null
-notes: "Gates locaux verts — PR a ouvrir"
+updated_at: "2026-07-25T22:28:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/47"
+notes: "PR #47 mergee — Unit of Work SQLAlchemy"
