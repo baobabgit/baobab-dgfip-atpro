@@ -16,9 +16,13 @@ integrations:
     consumed_by:
       - parser
       - cli
-    status: delivered_partial  # BL-003..BL-005
+    status: delivered
   parser:
     provides:
+      - FileInspection
+      - SchemaDetector
+      - ParseFileUseCase
+      - CSV readers
       - ParseIssue
       - ImportWarning
       - ImportError
@@ -26,33 +30,26 @@ integrations:
       - FileMetadata
       - ParseResult
       - ParsePreview
-    pending:
-      - FileInspection  # BL-007+
-      - CSV readers  # BL-011..BL-015
     consumed_by:
       - cli
-      - future_api
-      - future_worker
-    status: delivered_partial  # BL-006
+    status: delivered
   cli:
-    provides: []
-    pending:
+    provides:
       - atpro file inspect
       - atpro file validate
       - atpro file preview
     consumes:
       - parser
       - domain
-    status: pending  # BL-017
+    status: delivered
   reference_data:
     provides:
       - docs/reference-data.md
-    pending:
-      - tests fixtures anonymisees  # BL-018
-      - optional real CSV validation  # BL-021
+      - tests/fixtures/csv
+      - optional ATPRO_REFERENCE_CSV_DIR validation
     consumes:
       - parser
-    status: framed
+    status: delivered
 status:
   postgres: out_of_scope
   fastapi: out_of_scope
@@ -60,5 +57,28 @@ status:
   docker_app: out_of_scope
   quarkdown: out_of_scope
 progress:
-  done: [BL-001, BL-002, BL-003, BL-004, BL-005, BL-006]
-  next: BL-007
+  done:
+    [
+      BL-001,
+      BL-002,
+      BL-003,
+      BL-004,
+      BL-005,
+      BL-006,
+      BL-007,
+      BL-008,
+      BL-009,
+      BL-010,
+      BL-011,
+      BL-012,
+      BL-013,
+      BL-014,
+      BL-015,
+      BL-016,
+      BL-017,
+      BL-018,
+      BL-019,
+      BL-020,
+      BL-021,
+    ]
+  next: null
