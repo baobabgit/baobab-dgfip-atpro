@@ -14,7 +14,7 @@ active_role: null
 active_tool: null
 branch: null
 locked_at: null
-last_heartbeat_at: "2026-07-25T14:02:00Z"
+last_heartbeat_at: "2026-07-25T14:05:00Z"
 expires_at: null
 lease_duration_minutes: 120
 status: IDLE
