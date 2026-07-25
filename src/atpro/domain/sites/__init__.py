@@ -5,4 +5,6 @@
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from atpro.domain.sites.site import Site
+
+__all__ = ["Site"]

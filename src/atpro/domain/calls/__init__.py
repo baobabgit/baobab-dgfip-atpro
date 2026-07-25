@@ -5,4 +5,7 @@
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from atpro.domain.calls.call import Call
+from atpro.domain.calls.call_segment import CallSegment
+
+__all__ = ["Call", "CallSegment"]
