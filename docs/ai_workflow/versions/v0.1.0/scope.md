@@ -39,4 +39,6 @@ Livrer le socle Python `atpro` capable d'inspecter, valider et previsualiser les
 
 Le backlog actif est `docs/ai_workflow/state/queue.yaml`.
 
-Le premier item executable est `BL-001`.
+Etat au 25 juillet 2026 : `BL-001` a `BL-006` sont `DONE` (merges sur
+`version/v0.1.0`). Le prochain item executable est `BL-007`
+(detection fichier), dependances satisfaites.

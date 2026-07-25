@@ -3,10 +3,10 @@ backlog_id: BL-004
 version_target: v0.1.0
 branch: bl/004-enums-value-objects
 base_branch: version/v0.1.0
-status: READY_FOR_REVIEW
-step: 10_pr
+status: MERGED
+step: 12_merged
 active_role: developpeur
 started_at: "2026-07-25T10:54:56Z"
-updated_at: "2026-07-25T10:58:00Z"
-pr_url: null
-notes: "Enums + VOs — gates OK"
+updated_at: "2026-07-25T10:57:33Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/12"
+notes: "Merge squash vers version/v0.1.0 — enums et value objects"

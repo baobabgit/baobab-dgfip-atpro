@@ -52,14 +52,14 @@ queue:
     title: "Implementer erreurs, warnings et resultats"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-006.md
     depends_on: [BL-004]
   - id: BL-007
     title: "Implementer detection fichier"
     version_target: v0.1.0
     priority: P0
-    status: TODO
+    status: READY
     path: docs/backlog/backlogs/BL-007.md
     depends_on: [BL-006]
   - id: BL-008

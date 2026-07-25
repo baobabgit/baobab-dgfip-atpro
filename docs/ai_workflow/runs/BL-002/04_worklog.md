@@ -1,5 +1,6 @@
 # Worklog — BL-002
 
-- Creation `src/atpro` + test d'import
-- Mise a jour `pyproject.toml`, Sphinx, release workflow, README
-- Suppression de `src/example_package` et tests associes
+- Création `src/atpro` + test d'import.
+- Mise à jour `pyproject.toml`, Sphinx, release workflow, README, `uv.lock`.
+- Suppression de `example_package` et tests associés.
+- PR #10 mergée.

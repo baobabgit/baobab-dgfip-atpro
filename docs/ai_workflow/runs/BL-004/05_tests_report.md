@@ -1,5 +1,5 @@
 # Rapport de tests — BL-004
 
-- 23 tests, couverture >= 95 %
-- black / ruff / mypy / bandit OK
-- build + twine + tracabilite OK
+- pytest : conversions secondes / HH:MM:SS, pourcentage virgule, plages invalides, SHA-256.
+- Couverture globale ≥ 95 % au merge.
+- black / ruff / mypy / bandit / build / traçabilité : OK (CI PR #12).

@@ -1,2 +1,5 @@
 # Worklog — BL-004
-Implementation enums et VOs.
+
+- Implémentation des 7 enums FEAT-005.2.
+- Value objects `DurationSeconds`, `Percentage`, `DateRange`, `FileSha256`.
+- Gates locales vertes ; PR #12 mergée.
