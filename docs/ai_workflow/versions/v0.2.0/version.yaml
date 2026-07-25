@@ -1,6 +1,6 @@
 version: v0.2.0
 title: "PostgreSQL et imports idempotents"
-status: PLANNED
+status: IN_DEVELOPMENT
 created_at: "2026-07-25"
 scope: "Persistance PostgreSQL, migrations Alembic, repositories, Unit of Work, imports idempotents, rollback et CLI imports/referentiels"
 entry_backlog: BL-022
