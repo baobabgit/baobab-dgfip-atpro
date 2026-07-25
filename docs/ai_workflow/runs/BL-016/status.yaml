@@ -1,0 +1,12 @@
+run_id: BL-016
+backlog_id: BL-016
+version_target: v0.1.0
+branch: bl/016-parse-orchestrator
+base_branch: version/v0.1.0
+status: IN_PROGRESS
+step: 05_tests
+active_role: developpeur
+started_at: "2026-07-25T16:12:00Z"
+updated_at: "2026-07-25T16:25:00Z"
+pr_url: null
+notes: "Gates verts ; ParseFileUseCase implemente ; pas de commit"
