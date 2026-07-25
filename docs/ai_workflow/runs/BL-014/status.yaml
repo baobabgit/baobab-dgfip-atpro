@@ -1,0 +1,12 @@
+run_id: BL-014
+backlog_id: BL-014
+version_target: v0.1.0
+branch: bl/014-tickets-reader
+base_branch: version/v0.1.0
+status: IN_PROGRESS
+step: 03_implementation
+active_role: developpeur
+started_at: "2026-07-25T14:05:16Z"
+updated_at: "2026-07-25T14:12:00Z"
+pr_url: null
+notes: "TicketsReader FEAT-007.1"
