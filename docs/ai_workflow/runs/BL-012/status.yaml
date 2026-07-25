@@ -1,0 +1,12 @@
+run_id: BL-012
+backlog_id: BL-012
+version_target: v0.1.0
+branch: bl/012-incoming-calls-reader
+base_branch: version/v0.1.0
+status: IN_PROGRESS
+step: 03_implementation
+active_role: developpeur
+started_at: "2026-07-25T13:57:30Z"
+updated_at: "2026-07-25T13:57:30Z"
+pr_url: null
+notes: "IncomingCallsReader FEAT-005.4"
