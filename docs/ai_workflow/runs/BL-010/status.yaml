@@ -1,0 +1,12 @@
+run_id: BL-010
+backlog_id: BL-010
+version_target: v0.1.0
+branch: bl/010-identity-normalizers
+base_branch: version/v0.1.0
+status: IN_PROGRESS
+step: 03_implementation
+active_role: developpeur
+started_at: "2026-07-25T13:46:30Z"
+updated_at: "2026-07-25T13:46:30Z"
+pr_url: null
+notes: "Normalizers agents et sites FEAT-010.1"
