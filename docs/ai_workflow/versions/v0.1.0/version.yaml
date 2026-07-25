@@ -1,13 +1,36 @@
 version: v0.1.0
 title: "Modele canonique et parseurs CSV"
-status: IN_DEVELOPMENT
+status: RELEASE_READY
 created_at: "2026-07-25"
 updated_at: "2026-07-25"
 scope: "Package Python atpro, modeles metier, parseurs CSV, CLI file minimal"
 entry_backlog: BL-001
-next_backlog: BL-007
-completed_backlogs: [BL-001, BL-002, BL-003, BL-004, BL-005, BL-006]
-release_ready: false
+next_backlog: null
+completed_backlogs:
+  [
+    BL-001,
+    BL-002,
+    BL-003,
+    BL-004,
+    BL-005,
+    BL-006,
+    BL-007,
+    BL-008,
+    BL-009,
+    BL-010,
+    BL-011,
+    BL-012,
+    BL-013,
+    BL-014,
+    BL-015,
+    BL-016,
+    BL-017,
+    BL-018,
+    BL-019,
+    BL-020,
+    BL-021,
+  ]
+release_ready: true
 required_files:
   - docs/ai_workflow/versions/v0.1.0/version.yaml
   - docs/ai_workflow/versions/v0.1.0/scope.md
@@ -15,8 +38,10 @@ required_files:
   - docs/ai_workflow/versions/v0.1.0/integration_matrix.yaml
   - docs/ai_workflow/versions/v0.1.0/release_report.md
 quality_gates:
-  traceability: required
-  adr_0001: required
-  queue_initialized: required
-  contracts_updated: required
-  reference_marker_declared: required_when_pyproject_exists
+  traceability: passed
+  adr_0001: passed
+  queue_initialized: passed
+  contracts_updated: passed
+  reference_marker_declared: passed
+  make_all: passed
+  coverage_ge_95: passed
