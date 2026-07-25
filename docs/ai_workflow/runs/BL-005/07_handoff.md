@@ -11,4 +11,6 @@ MERGED vers `version/v0.1.0` (PR #13, squash).
 
 ## Suite
 
-Démarrer BL-006 (erreurs, warnings et résultats de parsing) si non déjà en cours.
+Au moment du merge : démarrer BL-006 (diagnostics parsing).
+
+Etat courant du lot (post BL-006) : prochain item = **BL-007**.

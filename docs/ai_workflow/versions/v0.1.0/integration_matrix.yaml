@@ -11,36 +11,54 @@ integrations:
       - CallSegment
       - Ticket
       - AgentDailyActivity
+      - domain enums
+      - domain value objects
     consumed_by:
       - parser
       - cli
+    status: delivered_partial  # BL-003..BL-005
   parser:
     provides:
-      - FileInspection
+      - ParseIssue
+      - ImportWarning
+      - ImportError
+      - ParseSummary
+      - FileMetadata
       - ParseResult
       - ParsePreview
-      - CSV readers
+    pending:
+      - FileInspection  # BL-007+
+      - CSV readers  # BL-011..BL-015
     consumed_by:
       - cli
       - future_api
       - future_worker
+    status: delivered_partial  # BL-006
   cli:
-    provides:
+    provides: []
+    pending:
       - atpro file inspect
       - atpro file validate
       - atpro file preview
     consumes:
       - parser
       - domain
+    status: pending  # BL-017
   reference_data:
     provides:
-      - tests fixtures
-      - optional real CSV validation
+      - docs/reference-data.md
+    pending:
+      - tests fixtures anonymisees  # BL-018
+      - optional real CSV validation  # BL-021
     consumes:
       - parser
+    status: framed
 status:
   postgres: out_of_scope
   fastapi: out_of_scope
   react: out_of_scope
   docker_app: out_of_scope
   quarkdown: out_of_scope
+progress:
+  done: [BL-001, BL-002, BL-003, BL-004, BL-005, BL-006]
+  next: BL-007
