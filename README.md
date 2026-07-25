@@ -152,6 +152,12 @@ uv run pytest --cov=src --cov-report=term-missing --cov-fail-under=95
 uv build
 ```
 
+La CI utilise uniquement les fixtures anonymisées (`tests/fixtures/csv/`).
+Validation locale optionnelle sur CSV réels :
+`ATPRO_REFERENCE_CSV_DIR` + `make reference-test`
+(ou `pytest -q -m reference --no-cov`).
+Détail : [`docs/reference-data.md`](docs/reference-data.md).
+
 Sous Windows sans `make` : `uv run nox -s all`.
 
 ## Documentation

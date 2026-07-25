@@ -1,7 +1,7 @@
 # Commandes standard du projet — toutes les exécutions passent par uv.
 .DEFAULT_GOAL := help
 
-.PHONY: help install quality test build traceability all clean new-version new-backlog
+.PHONY: help install quality test reference-test build traceability all clean new-version new-backlog
 
 help: ## Affiche cette aide
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -19,6 +19,9 @@ quality: ## Formatage (black), lint (ruff), typage (mypy), sécurité (bandit)
 
 test: ## Tests + couverture ≥ 95 %
 	uv run pytest --cov=src --cov-report=term-missing --cov-fail-under=95
+
+reference-test: ## Validation optionnelle CSV reels (ATPRO_REFERENCE_CSV_DIR)
+	uv run pytest -q -m reference --no-cov
 
 build: ## Construit le package et vérifie la distribution
 	uv build
