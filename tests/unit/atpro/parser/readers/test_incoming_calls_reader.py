@@ -17,29 +17,27 @@ def _write_csv(path: Path, body_lines: list[str]) -> None:
     path.write_text(_HEADER + "\n" + "\n".join(body_lines) + "\n", encoding="utf-8")
 
 
+_FIXTURE_INCOMING = (
+    Path(__file__).resolve().parents[4]
+    / "fixtures"
+    / "csv"
+    / "incoming_calls_valid.csv"
+)
+
+
 class TestIncomingCallsReader:
-    def test_FEAT_005_4_valid_file_two_measures(self, tmp_path: Path) -> None:
-        path = tmp_path / "appels_entrants.csv"
-        _write_csv(
-            path,
-            [
-                "A1;0611111111;0142000000;Alice DUPONT;"
-                "15/06/2026 10:00:00;15/06/2026 10:05:00;F1;S1;"
-                "Duree de communication;120",
-                "A1;0611111111;0142000000;Alice DUPONT;"
-                "15/06/2026 10:00:00;15/06/2026 10:05:00;F1;S1;"
-                "Duree de mise en garde;30",
-            ],
-        )
-        result = IncomingCallsReader().read(path)
+    def test_FEAT_005_4_valid_file_two_measures(self) -> None:
+        result = IncomingCallsReader().read(_FIXTURE_INCOMING)
         assert not result.errors
-        assert len(result.calls) == 1
-        assert result.calls[0].direction is CallDirection.INCOMING
-        assert result.calls[0].flow == "F1"
-        assert result.calls[0].service == "S1"
-        assert len(result.segments) == 1
-        assert result.segments[0].talk_duration_seconds.seconds == 120
-        assert result.segments[0].hold_duration_seconds.seconds == 30
+        assert len(result.calls) >= 1
+        alice = next(c for c in result.calls if c.external_call_id == "A100")
+        assert alice.direction is CallDirection.INCOMING
+        assert alice.flow == "Flux Standard"
+        assert alice.service == "Service Accueil"
+        alice_seg = next(s for s in result.segments if s.call_id == alice.id)
+        assert alice_seg.talk_duration_seconds.seconds == 120
+        assert alice_seg.hold_duration_seconds.seconds == 30
+        assert alice_seg.raw_agent_name == "Alice DUPONT"
 
     def test_FEAT_005_4_historical_date_format(self, tmp_path: Path) -> None:
         path = tmp_path / "historique.csv"

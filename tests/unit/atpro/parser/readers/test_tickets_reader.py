@@ -6,6 +6,10 @@ from pathlib import Path
 
 from atpro.parser.readers.tickets_reader import TicketsReader
 
+_FIXTURE_TICKETS_LONG = (
+    Path(__file__).resolve().parents[4] / "fixtures" / "csv" / "tickets_long_valid.csv"
+)
+
 _LONG_HEADER = (
     "Numero Ticket;Date-Heure Creation Ticket;Date-Heure Prise en Charge Ticket;"
     "Date-Heure Resolution Ticket;Date-Heure Cloture Ticket;Statut Ticket;"
@@ -20,20 +24,11 @@ _REDUCED_HEADER = (
 
 
 class TestTicketsReader:
-    def test_FEAT_007_1_closed_ticket_long_schema(self, tmp_path: Path) -> None:
-        path = tmp_path / "tickets_long.csv"
-        path.write_text(
-            _LONG_HEADER + "\n" + "T100;15/06/2026 10:00:00;15/06/2026 10:05:00;"
-            "15/06/2026 11:00:00;15/06/2026 11:30:00;Clos;Site Paris;"
-            "Telephone;Haute;Alice DUPONT;Bob MARTIN;Alice DUPONT;"
-            "N1;Fiscal;Demande;Standard;0611111111\n",
-            encoding="utf-8",
-        )
-        result = TicketsReader().read(path)
+    def test_FEAT_007_1_closed_ticket_long_schema(self) -> None:
+        result = TicketsReader().read(_FIXTURE_TICKETS_LONG)
         assert not result.errors
-        assert len(result.tickets) == 1
-        ticket = result.tickets[0]
-        assert ticket.external_ticket_id == "T100"
+        assert len(result.tickets) >= 1
+        ticket = next(t for t in result.tickets if t.external_ticket_id == "T100")
         assert ticket.status == "clos"
         assert ticket.channel == "telephone"
         assert ticket.resolved_at is not None
