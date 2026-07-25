@@ -3,10 +3,10 @@ backlog_id: BL-015
 version_target: v0.1.0
 branch: bl/015-agent-activities-readers
 base_branch: version/v0.1.0
-status: IN_PROGRESS
-step: 04_implementation
+status: READY_TO_MERGE
+step: 10_merge
 active_role: developpeur
-started_at: "2026-07-25T14:12:46Z"
-updated_at: "2026-07-25T14:20:00Z"
-pr_url: ""
-notes: "Implementation readers activites agents wide/long"
+started_at: "2026-07-25T14:20:00Z"
+updated_at: "2026-07-25T14:25:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/30"
+notes: "CI + verdicts GO"
