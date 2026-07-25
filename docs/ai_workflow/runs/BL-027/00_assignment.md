@@ -4,4 +4,4 @@
 - **Version** : v0.2.0
 - **Branche** : `bl/027-alembic-init`
 - **FEAT** : FEAT-017.1
-- **US** : US-017
+- **PR** : https://github.com/baobabgit/baobab-dgfip-atpro/pull/49
