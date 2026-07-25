@@ -3,10 +3,10 @@ backlog_id: BL-007
 version_target: v0.1.0
 branch: bl/007-file-detection
 base_branch: version/v0.1.0
-status: IN_PROGRESS
-step: 03_implementation
+status: READY_TO_MERGE
+step: 10_merge
 active_role: developpeur
 started_at: "2026-07-25T13:03:51Z"
-updated_at: "2026-07-25T13:03:51Z"
-pr_url: null
-notes: "Implementation detection fichier (SHA-256, encodage, separateur, en-tetes)"
+updated_at: "2026-07-25T13:15:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/17"
+notes: "CI verte + verdicts GO — merge squash"
