@@ -1,3 +1,3 @@
 # Handoff — BL-027
 
-PR a merger. Suite : **BL-028** (tables imports et referentiels).
+PR #49 mergee. Suite : **BL-028** (migrer tables imports et referentiels).
