@@ -11,9 +11,17 @@
 ## Gates pendant developpement
 
 - Chaque backlog demarre avec un fichier `docs/ai_workflow/runs/BL-XXX/status.yaml`.
+- A la cloture d'un BL : `status.yaml` passe a `MERGED` avec `pr_url`, et
+  `06_review.md` / `07_handoff.md` sont renseignes avant ou juste apres le merge.
+- `queue.yaml` reste aligne (DONE / READY / IN_PROGRESS) avec la realite Git.
 - Les warnings de tests sont corriges ou explicitement justifies.
-- Le marqueur Pytest `reference` est declare dans `pyproject.toml` des que les tests de reference sont ajoutes.
+- Le marqueur Pytest `reference` est declare dans `pyproject.toml` des que les tests de reference sont ajoutes (prevu BL-021).
 - Les fichiers sous `sources/` restent en lecture seule.
+
+## Avancement courant (2026-07-25)
+
+- `BL-001`..`BL-006` : DONE / MERGED.
+- Prochain executable : `BL-007`.
 
 ## Gates de sortie
 

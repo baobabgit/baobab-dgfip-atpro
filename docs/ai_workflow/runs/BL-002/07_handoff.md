@@ -11,4 +11,6 @@ MERGED vers `version/v0.1.0` (PR #10, squash).
 
 ## Suite
 
-Démarrer BL-003 (arborescence domaine).
+Au moment du merge : démarrer BL-003 (arborescence domaine).
+
+Etat courant du lot (post BL-006) : prochain item = **BL-007**.
