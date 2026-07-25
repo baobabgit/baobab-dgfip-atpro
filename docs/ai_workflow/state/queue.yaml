@@ -136,7 +136,7 @@ queue:
     title: "Creer fixtures anonymisees"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-018.md
     depends_on: [BL-008]
   - id: BL-019

@@ -8,13 +8,13 @@
 #
 # Tout outil actif doit mettre à jour last_heartbeat_at et expires_at régulièrement.
 
-locked: true
-active_run: BL-018
-active_role: developpeur
-active_tool: cursor
-branch: bl/018-anonymized-fixtures
-locked_at: "2026-07-25T16:25:41Z"
-last_heartbeat_at: "2026-07-25T16:28:00Z"
-expires_at: "2026-07-25T18:28:00Z"
+locked: false
+active_run: null
+active_role: null
+active_tool: null
+branch: null
+locked_at: null
+last_heartbeat_at: "2026-07-25T16:30:00Z"
+expires_at: null
 lease_duration_minutes: 120
-status: BUSY
+status: IDLE
