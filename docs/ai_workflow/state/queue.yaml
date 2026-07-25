@@ -24,14 +24,14 @@ queue:
     title: "Nettoyer le squelette template"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-002.md
     depends_on: [BL-001]
   - id: BL-003
     title: "Initialiser l'arborescence du domaine"
     version_target: v0.1.0
     priority: P0
-    status: TODO
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-003.md
     depends_on: [BL-002]
   - id: BL-004
