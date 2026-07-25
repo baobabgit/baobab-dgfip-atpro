@@ -9,12 +9,12 @@
 # Tout outil actif doit mettre à jour last_heartbeat_at et expires_at régulièrement.
 
 locked: true
-active_run: BL-022
-active_role: architecte
+active_run: BL-023
+active_role: developpeur
 active_tool: cursor
-branch: bl/022-adr-persistance
-locked_at: "2026-07-25T21:31:44Z"
-last_heartbeat_at: "2026-07-25T21:40:00Z"
-expires_at: "2026-07-25T23:40:00Z"
+branch: bl/023-database-config
+locked_at: "2026-07-25T21:45:00Z"
+last_heartbeat_at: "2026-07-25T21:45:00Z"
+expires_at: "2026-07-25T23:45:00Z"
 lease_duration_minutes: 120
 status: BUSY
