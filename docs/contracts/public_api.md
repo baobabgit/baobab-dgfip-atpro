@@ -1,21 +1,61 @@
-# Contrat — API publique
+# Contrat public Python v0.1.0
 
-> Ce fichier documente les symboles exportés dans `__all__` de ce package.
-> Toute modification incompatible d'un symbole public déclenche un bump SemVer majeur.
+Package : `atpro`  
+Version cible : `v0.1.0`
 
-## Symboles exportés
+## Objectif
 
-<!-- Documenter ici chaque classe, fonction ou constante publique. -->
+Ce contrat remplace le contrat template. Il decrit l'API publique attendue du package `atpro` pour le lot `v0.1.0`.
 
-| Symbole | Type | Module | Spec |
-|---------|------|--------|------|
-| `Greeter` | Classe | `example_package.greeter` | FEAT-001.1 |
-| `Repository` | Classe abstraite | `example_package.repository` | FEAT-001.2 |
+## Modules publics attendus
 
-## Règle de rupture de contrat
+```text
+atpro.domain
+atpro.parser
+atpro.interfaces.cli
+```
 
-- Suppression d'un symbole public → **MAJOR bump**
-- Changement de signature incompatible → **MAJOR bump**
-- Ajout d'un paramètre obligatoire → **MAJOR bump**
-- Ajout d'un symbole → **MINOR bump**
-- Correction de comportement sans rupture → **PATCH bump**
+## Modeles publics attendus
+
+Le package doit exposer ou rendre importables les modeles suivants :
+
+- `Site`
+- `Agent`
+- `AgentAlias`
+- `AgentSiteAssignment`
+- `Call`
+- `CallSegment`
+- `Ticket`
+- `AgentDailyActivity`
+- `FileMetadata`
+- `ParseResult`
+- `ParsePreview`
+- `ParseIssue`
+
+## Cas d'usage public attendu
+
+```python
+from pathlib import Path
+
+from atpro.parser import ParseFileUseCase
+
+use_case = ParseFileUseCase()
+inspection = use_case.inspect(Path("appels.csv"))
+result = use_case.parse(Path("appels.csv"))
+preview = use_case.preview(Path("appels.csv"), limit=10)
+```
+
+## Contraintes
+
+- Le domaine ne depend pas de SQLAlchemy, FastAPI, Typer, Polars ou Quarkdown.
+- Le parsing ne depend pas de PostgreSQL.
+- Les resultats sont serialisables.
+- Les erreurs sont structurees et testables.
+
+## Hors contrat v0.1.0
+
+- API HTTP ;
+- persistence ;
+- statistiques ;
+- rapports ;
+- interface React.

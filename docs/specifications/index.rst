@@ -1,34 +1,66 @@
-Spécifications (cahier des charges)
-===================================
+Spécifications AT Pro Pilotage (v0.1.0)
+=======================================
 
-Cette section est la **source de vérité stable** du besoin. Elle décrit les
-**User Stories (US)** et leurs **Features (FEAT)**. Le **backlog** (les tâches,
-volatile) vit, lui, dans GitHub Issues / Projects et n'est pas dupliqué ici.
+Cette section porte le **cahier des charges** (entrée humaine figée) pour le
+projet **AT Pro Pilotage**, version cible ``v0.1.0``.
 
-Le **cahier des charges brut** (entrée humaine) se dépose dans
-``cahier-des-charges/`` ; le rôle Product Owner en dérive les ``us/`` ci-dessous.
-Chaque US/FEAT porte un champ ``:origin:`` indiquant sa provenance (cahier des
-charges ou projet externe demandeur).
+Les **User Stories**, **Features** et **Backlogs de livraison** ne sont **pas**
+dupliqués ici : leur emplacement canonique AGENTS-compatible est
+``docs/backlog/``.
+
+Emplacements
+------------
+
+==========================================  ========================================
+Contenu                                     Chemin
+==========================================  ========================================
+Cahier des charges                          ``000_cahier-des-charges/``
+User Stories (``US-XXX``)                   ``docs/backlog/user_stories/``
+Features (``FEAT-XXX.Y``)                   ``docs/backlog/features/``
+Backlogs (``BL-XXX``)                       ``docs/backlog/backlogs/``
+Index / matrice de traçabilité              ``docs/backlog/index.rst``
+CSV de référence                            ``docs/reference-data.md``
+File d'exécution                            ``docs/ai_workflow/state/queue.yaml``
+==========================================  ========================================
+
+Ordre de lecture recommandé
+---------------------------
+
+1. ``000_cahier-des-charges/``
+2. ``docs/backlog/user_stories/``
+3. ``docs/backlog/features/``
+4. ``docs/backlog/backlogs/``
+5. ``docs/reference-data.md``
+6. ``docs/ai_workflow/state/queue.yaml``
+7. ``docs/architecture/adr/``
+
+Résumé du lot v0.1.0
+--------------------
+
+La version ``v0.1.0`` livre le cœur Python de parsing du package ``atpro`` :
+ADR de cadrage, modèles métier, détection / normalisation, parseurs CSV,
+``ParseResult``, CLI ``file``, fixtures anonymisées, cadrage des CSV réels de
+référence, contrats publics et matrice de compatibilité.
+
+Hors périmètre : PostgreSQL, FastAPI, React, Docker applicatif complet,
+statistiques, Quarkdown, authentification, rapprochement appels / tickets.
 
 Hiérarchie et identifiants
 --------------------------
 
-================  =====================  ==============================
-Niveau            Identifiant            Suivi
-================  =====================  ==============================
-User Story        ``US-001``             Issue GitHub ``[US-001]``
-Feature           ``FEAT-001.1``         Sub-issue ``[FEAT-001.1]``
-Tâche (backlog)   ``TASK-001.1.1``       Sub-issue ``[TASK-001.1.1]``
-================  =====================  ==============================
+=====================  ===========================  =============================
+Niveau                 Identifiant                  Emplacement
+=====================  ===========================  =============================
+User Story             ``US-001`` … ``US-013``      ``docs/backlog/user_stories/``
+Feature                ``FEAT-XXX.Y``               ``docs/backlog/features/``
+Backlog de livraison   ``BL-001`` … ``BL-021``      ``docs/backlog/backlogs/``
+=====================  ===========================  =============================
 
 Ces identifiants sont propagés dans les commits, les noms de tests et les
-docstrings (champ ``:spec:``), assurant la traçabilité besoin → code → test.
+docstrings (champ ``:spec:``).
 
-.. toctree::
-   :maxdepth: 2
-   :caption: User Stories
-
-   us/index
+Premier item exécutable : ``BL-001`` (voir ``docs/backlog/index.rst`` pour la
+matrice US / FEAT / BL).
 
 .. toctree::
    :maxdepth: 1

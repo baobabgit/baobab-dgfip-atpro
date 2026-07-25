@@ -3,14 +3,15 @@
 > Prérequis (hors IA) : voir [`../SETUP.md`](../SETUP.md) — marquer le dépôt comme
 > *template*, créer le repo (`gh repo create --template`), `gh auth refresh -s project`,
 > environnements de publication. À copier dans l'IA après avoir : (1) créé le repo depuis
-> le template, (2) déposé le cahier des charges dans `docs/specifications/cahier-des-charges/`.
+> le template, (2) déposé le cahier des charges dans
+> `docs/specifications/000_cahier-des-charges/`.
 
 ---
 
 Tu es l'**Orchestrateur** en mode bootstrap. Lis `AGENTS.md` et tout `docs/workflow/`
 avant d'agir. Déroule la phase 0, puis bascule en mode orchestration normal.
 
-1. **Lire le cahier des charges** dans `docs/specifications/cahier-des-charges/`.
+1. **Lire le cahier des charges** dans `docs/specifications/000_cahier-des-charges/`.
 2. **Nommer le projet** : déduis le nom du package. Renomme `example_package` partout
    (`src/`, `tests/`, `pyproject.toml`, `docs/conf.py`, imports, `__all__`) et remplace
    `your-org/your-repo` (badges README, URLs `pyproject.toml`).
@@ -23,8 +24,8 @@ avant d'agir. Déroule la phase 0, puis bascule en mode orchestration normal.
    - **sinon conserve-les comme placeholders temporaires** jusqu'à la 1ʳᵉ tâche de dev,
      puis supprime-les (code + tests) quand le premier vrai domaine est implémenté.
 5. **Rôle Product Owner** :
-   - découpe le CDC en `US-XXX` → `FEAT-XXX.Y`, écris les specs RST sous
-     `docs/specifications/us/`, renseigne `:origin:` ;
+   - découpe le CDC en `US-XXX` → `FEAT-XXX.Y` → `BL-XXX`, écris les fiches sous
+     `docs/backlog/user_stories/`, `docs/backlog/features/`, `docs/backlog/backlogs/` ;
    - **réécris l'intro du `README.md`** (titre, blurb, À propos, Fonctionnalités, Stack)
      pour décrire le projet réel et non le template ;
    - lance `bash scripts/setup_github.sh` (labels, protection de branche, environnements —

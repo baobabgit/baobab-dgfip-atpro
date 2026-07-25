@@ -22,7 +22,7 @@ carte ; à *Done*, renseigner **Fin**. (Champs Date du Project, alimentent la vu
 
 | Phase (rôle) | Definition of Ready — *entrer* | Definition of Done — *sortir* (+ U1, U2) |
 | --- | --- | --- |
-| **Spec** (PO) | CDC présent dans `cahier-des-charges/` ; une US identifiée | US + FEAT créées avec critères d'acceptation ; `docs/specifications/us/*.rst` rédigé ; IDs + `:origin:` attribués |
+| **Spec** (PO) | CDC présent dans `000_cahier-des-charges/` ; une US identifiée | US + FEAT + BL créées avec critères d'acceptation ; fiches sous `docs/backlog/` ; IDs attribués |
 | **Design** (Architecte) | FEAT a critères d'acceptation + spec RST | Classes identifiées (responsabilités, interfaces, abstraites) ; mapping FEAT→classes ; TASK sub-issues créées (taille sprint) ; note de conception |
 | **In progress** (Dev) | TASK « Ready » : lien spec, critères, estimation, classe cible, dans le sprint | TDD : tests miroir (`tests/unit/`) + code typé + docstrings RST `:spec:` ; `make all` vert ; commit `BL-XXX: action` ; PR ouverte |
 | **In review** (Relecteur) | PR ouverte, CI verte | Conformité `AGENTS.md` ; critères d'acceptation validés ; couverture ≥ 95 % ; passe de simplification ; **API publique : rupture → bump majeur + note de migration** ; décision approuvé/renvoyé ; déclencheur Sécurité évalué |

@@ -2,7 +2,6 @@
 
 > Services (classes avec logique métier) exposés publiquement.
 
-<!-- Documenter ici les services publics une fois créés. -->
-
-Aucun service public pour l'instant (les exemples `Greeter` et `Repository`
-servent de démonstration des patterns du template).
+Les services publics attendus pour ``v0.1.0`` sont décrits dans
+[`public_api.md`](public_api.md), [`parser_contract.md`](parser_contract.md)
+et [`cli_contract.md`](cli_contract.md).
