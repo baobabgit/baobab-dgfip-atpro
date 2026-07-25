@@ -1,2 +1,4 @@
 # Contexte — BL-005
-Implementer Site, Agent, AgentAlias, AgentSiteAssignment, Call, CallSegment, Ticket, AgentDailyActivity.
+
+Créer les objets métier produits par les parseurs (référentiels, appels, tickets,
+activités), avec provenance source, sans dépendance infrastructure.

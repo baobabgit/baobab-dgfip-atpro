@@ -3,10 +3,10 @@ backlog_id: BL-003
 version_target: v0.1.0
 branch: bl/003-domain-tree
 base_branch: version/v0.1.0
-status: READY_FOR_REVIEW
-step: 10_pr
+status: MERGED
+step: 12_merged
 active_role: developpeur
 started_at: "2026-07-25T10:52:00Z"
-updated_at: "2026-07-25T10:54:00Z"
-pr_url: null
-notes: "Arborescence domaine — gates OK"
+updated_at: "2026-07-25T10:54:40Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/11"
+notes: "Merge squash vers version/v0.1.0 — arborescence domain"
