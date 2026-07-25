@@ -1,0 +1,19 @@
+Migrations Alembic — AT Pro Pilotage
+=====================================
+
+Emplacement officiel des revisions PostgreSQL (`v0.2.0+`).
+
+- Configuration : ``alembic.ini`` a la racine du depot
+- Environnement : ``migrations/env.py`` (URL via ``DatabaseSettings``)
+- Revisions : ``migrations/versions/`` (noms lisibles, ex. ``20260726_baseline``)
+
+Commandes :
+
+.. code-block:: bash
+
+   make db-upgrade
+   uv run alembic upgrade head
+   uv run alembic downgrade base
+   uv run alembic revision -m "description"
+
+Voir aussi ``docs/operations/database.md``.

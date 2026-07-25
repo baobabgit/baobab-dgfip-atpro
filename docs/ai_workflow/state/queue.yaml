@@ -190,7 +190,7 @@ queue:
     title: "Initialiser Alembic"
     version_target: v0.2.0
     priority: P0
-    status: READY
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-027.md
     depends_on: [BL-025]
   - id: BL-028
