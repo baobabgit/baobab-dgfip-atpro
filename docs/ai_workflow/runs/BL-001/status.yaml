@@ -1,0 +1,12 @@
+run_id: BL-001
+backlog_id: BL-001
+version_target: v0.1.0
+branch: bl/001-structure-depot
+base_branch: version/v0.1.0
+status: READY_FOR_REVIEW
+step: 10_pr
+active_role: developpeur
+started_at: "2026-07-25T10:41:00Z"
+updated_at: "2026-07-25T10:50:00Z"
+pr_url: null
+notes: "ADR-0001 + cadrage v0.1.0 — gates locales OK"

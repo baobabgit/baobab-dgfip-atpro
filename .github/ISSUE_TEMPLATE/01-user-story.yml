@@ -28,5 +28,5 @@ body:
   - type: input
     id: spec
     attributes:
-      label: Spécification (RST)
-      placeholder: "docs/specifications/us/US-001-.../index.rst"
+      label: Spécification
+      placeholder: "docs/backlog/user_stories/US-001.md"

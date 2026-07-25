@@ -2,13 +2,14 @@
 
 > Imports garantis stables pour les consommateurs de ce package.
 
-## Imports garantis
+## Imports garantis (cible v0.1.0)
 
 ```python
-from example_package import Greeter, Repository
-from example_package.greeter import Greeter
-from example_package.repository import Repository
+import atpro
+from atpro import domain, parser
 ```
+
+Le détail des symboles publics est dans [`public_api.md`](public_api.md).
 
 ## Imports internes (non garantis)
 

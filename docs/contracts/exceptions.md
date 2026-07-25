@@ -2,12 +2,11 @@
 
 > Exceptions publiques de ce package.
 
-## Exceptions déclarées
+## Exceptions déclarées (cible v0.1.0)
 
-| Exception | Module | Déclenchée par |
-|-----------|--------|----------------|
-| `ValueError` | builtins | `Greeter.__init__` si le nom est vide |
-| `KeyError` | builtins | `Repository.get` si l'élément n'existe pas |
+Les exceptions métier de parsing (erreurs, warnings structurés) sont définies
+avec le lot ``v0.1.0``. Voir [`parser_contract.md`](parser_contract.md) et
+[`public_api.md`](public_api.md).
 
 ## Notes
 
