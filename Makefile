@@ -1,7 +1,7 @@
 # Commandes standard du projet — toutes les exécutions passent par uv.
 .DEFAULT_GOAL := help
 
-.PHONY: help install quality test reference-test build traceability all clean new-version new-backlog
+.PHONY: help install quality test reference-test build traceability all clean new-version new-backlog db-upgrade
 
 help: ## Affiche cette aide
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -29,6 +29,9 @@ build: ## Construit le package et vérifie la distribution
 
 traceability: ## Vérifie la traçabilité besoin → backlog → run
 	uv run python scripts/check_traceability.py
+
+db-upgrade: ## Applique les migrations Alembic (upgrade head)
+	uv run alembic upgrade head
 
 new-version: ## Crée le squelette d'une version  (VERSION=vX.Y.Z)
 	@test -n "$(VERSION)" || (echo "Usage: make new-version VERSION=vX.Y.Z" && exit 1)

@@ -5,6 +5,7 @@
 
 from __future__ import annotations
 
+from atpro.infrastructure.database.alembic_config_factory import AlembicConfigFactory
 from atpro.infrastructure.database.base import Base
 from atpro.infrastructure.database.constraint_naming_convention import (
     ConstraintNamingConvention,
@@ -19,6 +20,7 @@ from atpro.infrastructure.database.unit_of_work_error import (
 )
 
 __all__: list[str] = [
+    "AlembicConfigFactory",
     "Base",
     "ConstraintNamingConvention",
     "EngineFactory",

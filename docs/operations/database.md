@@ -64,6 +64,33 @@ docker compose logs postgres --tail=100
 docker compose exec postgres psql -U atpro -d atpro -c '\conninfo'
 ```
 
+## Migrations Alembic
+
+Precondition : PostgreSQL demarre et joignable (variables ci-dessus ou
+`ATPRO_DATABASE_URL`).
+
+```bash
+# Appliquer toutes les revisions
+make db-upgrade
+# equivalent :
+uv run alembic upgrade head
+
+# Revenir a l'etat vide (baseline)
+uv run alembic downgrade base
+
+# Creer une nouvelle revision (apres BL-028+)
+uv run alembic revision -m "add_import_tables"
+```
+
+Emplacements stables (chemins relatifs au depot, pas de chemin absolu) :
+
+- `alembic.ini`
+- `migrations/env.py` — URL via `DatabaseSettings`, metadata via `Base`
+- `migrations/versions/` — revisions lisibles (`20260726_baseline`, …)
+
+La revision `20260726_baseline` est vide : les tables metier arrivent avec
+BL-028 / BL-029.
+
 ## Limites v0.2.0
 
 - Pas d'image backend / frontend / Nginx / worker dans ce compose.
