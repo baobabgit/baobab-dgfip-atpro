@@ -3,10 +3,10 @@ backlog_id: BL-007
 version_target: v0.1.0
 branch: bl/007-file-detection
 base_branch: version/v0.1.0
-status: READY_TO_MERGE
-step: 10_merge
+status: MERGED
+step: 12_merged
 active_role: developpeur
 started_at: "2026-07-25T13:03:51Z"
-updated_at: "2026-07-25T13:15:00Z"
+updated_at: "2026-07-25T13:11:23Z"
 pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/17"
-notes: "CI verte + verdicts GO — merge squash"
+notes: "Merge squash vers version/v0.1.0 — detection fichier"

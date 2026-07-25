@@ -8,13 +8,13 @@
 #
 # Tout outil actif doit mettre à jour last_heartbeat_at et expires_at régulièrement.
 
-locked: false
-active_run: null
-active_role: null
-active_tool: null
-branch: null
-locked_at: null
-last_heartbeat_at: null
-expires_at: null
+locked: true
+active_run: BL-008
+active_role: developpeur
+active_tool: cursor
+branch: bl/008-schema-registry
+locked_at: "2026-07-25T13:12:00Z"
+last_heartbeat_at: "2026-07-25T13:12:00Z"
+expires_at: "2026-07-25T15:12:00Z"
 lease_duration_minutes: 120
-status: IDLE
+status: BUSY

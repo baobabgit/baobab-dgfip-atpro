@@ -1,0 +1,12 @@
+run_id: BL-008
+backlog_id: BL-008
+version_target: v0.1.0
+branch: bl/008-schema-registry
+base_branch: version/v0.1.0
+status: IN_PROGRESS
+step: 03_implementation
+active_role: developpeur
+started_at: "2026-07-25T13:12:00Z"
+updated_at: "2026-07-25T13:12:00Z"
+pr_url: null
+notes: "Implementation registre de schemas et scoring de detection"
