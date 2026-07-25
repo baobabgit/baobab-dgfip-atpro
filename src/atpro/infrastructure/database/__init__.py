@@ -11,10 +11,20 @@ from atpro.infrastructure.database.constraint_naming_convention import (
 )
 from atpro.infrastructure.database.engine_factory import EngineFactory
 from atpro.infrastructure.database.session import SessionFactory
+from atpro.infrastructure.database.unit_of_work import SqlAlchemyUnitOfWork
+from atpro.infrastructure.database.unit_of_work_error import (
+    UnitOfWorkAlreadyCommittedError,
+    UnitOfWorkClosedError,
+    UnitOfWorkError,
+)
 
 __all__: list[str] = [
     "Base",
     "ConstraintNamingConvention",
     "EngineFactory",
     "SessionFactory",
+    "SqlAlchemyUnitOfWork",
+    "UnitOfWorkAlreadyCommittedError",
+    "UnitOfWorkClosedError",
+    "UnitOfWorkError",
 ]
