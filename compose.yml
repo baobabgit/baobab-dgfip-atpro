@@ -1,0 +1,31 @@
+# Compose de developpement — PostgreSQL uniquement (v0.2.0)
+# Usage : docker compose --env-file .env up -d postgres
+# Ne pas reutiliser ces credentials hors developpement local.
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: atpro-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${ATPRO_DATABASE_NAME:-atpro}
+      POSTGRES_USER: ${ATPRO_DATABASE_USER:-atpro}
+      POSTGRES_PASSWORD: ${ATPRO_DATABASE_PASSWORD:-atpro}
+    ports:
+      - "${ATPRO_DATABASE_PORT:-5432}:5432"
+    volumes:
+      - atpro_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${ATPRO_DATABASE_USER:-atpro} -d ${ATPRO_DATABASE_NAME:-atpro}",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  atpro_postgres_data:
+    name: atpro_postgres_data
