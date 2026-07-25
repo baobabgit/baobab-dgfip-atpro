@@ -87,7 +87,7 @@ queue:
     title: "Implementer reader appels commun"
     version_target: v0.1.0
     priority: P0
-    status: READY
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-011.md
     depends_on: [BL-005, BL-006, BL-009, BL-010]
   - id: BL-012
