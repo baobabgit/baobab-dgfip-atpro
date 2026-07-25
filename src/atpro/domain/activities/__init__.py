@@ -5,4 +5,6 @@
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from atpro.domain.activities.agent_daily_activity import AgentDailyActivity
+
+__all__ = ["AgentDailyActivity"]

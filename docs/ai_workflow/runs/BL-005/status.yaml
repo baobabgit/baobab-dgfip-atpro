@@ -1,0 +1,12 @@
+run_id: BL-005
+backlog_id: BL-005
+version_target: v0.1.0
+branch: bl/005-business-models
+base_branch: version/v0.1.0
+status: READY_FOR_REVIEW
+step: 10_pr
+active_role: developpeur
+started_at: "2026-07-25T11:48:35Z"
+updated_at: "2026-07-25T11:52:00Z"
+pr_url: null
+notes: "Modeles metier — gates OK"
