@@ -1,22 +1,20 @@
-# Example Package
+# atpro
 
-[![Integration](https://github.com/your-org/your-repo/actions/workflows/integration.yml/badge.svg)](https://github.com/your-org/your-repo/actions/workflows/integration.yml)
-[![Release](https://github.com/your-org/your-repo/actions/workflows/release.yml/badge.svg)](https://github.com/your-org/your-repo/actions/workflows/release.yml)
-[![PyPI version](https://img.shields.io/pypi/v/example-package.svg)](https://pypi.org/project/example-package/)
-[![Python versions](https://img.shields.io/pypi/pyversions/example-package.svg)](https://pypi.org/project/example-package/)
+[![CI](https://github.com/baobabgit/baobab-dgfip-atpro/actions/workflows/ci.yml/badge.svg)](https://github.com/baobabgit/baobab-dgfip-atpro/actions/workflows/ci.yml)
+[![Integration](https://github.com/baobabgit/baobab-dgfip-atpro/actions/workflows/integration.yml/badge.svg)](https://github.com/baobabgit/baobab-dgfip-atpro/actions/workflows/integration.yml)
+[![Release](https://github.com/baobabgit/baobab-dgfip-atpro/actions/workflows/release.yml/badge.svg)](https://github.com/baobabgit/baobab-dgfip-atpro/actions/workflows/release.yml)
+[![PyPI version](https://img.shields.io/pypi/v/atpro.svg)](https://pypi.org/project/atpro/)
+[![Python versions](https://img.shields.io/pypi/pyversions/atpro.svg)](https://pypi.org/project/atpro/)
 <!-- Badge Read the Docs : à réactiver une fois l'hébergement de doc configuré.
-[![Documentation Status](https://readthedocs.org/projects/your-repo/badge/?version=latest)](https://your-repo.readthedocs.io/en/latest/)
+[![Documentation Status](https://readthedocs.org/projects/baobab-dgfip-atpro/badge/?version=latest)](https://baobab-dgfip-atpro.readthedocs.io/en/latest/)
 -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![Checked with mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
 
-> Template de projet Python orienté objet, pensé pour être développé par **plusieurs outils**
-> (Claude Code, Cursor, Codex) qui partagent un **jeu de règles unique** via `AGENTS.md`.
-
-> ℹ️ Remplacez `your-org/your-repo`, `example-package` et le package `example_package`
-> par les valeurs de votre projet (badges, `pyproject.toml`, dossiers `src/` et `tests/`).
+> Package Python `atpro` pour le pilotage AT Pro (DGFiP) : modeles et parseurs CSV.
+> Les regles de developpement sont dans `AGENTS.md`.
 
 ## Table des matières
 
@@ -88,8 +86,8 @@ Besoin (docs/specifications, RST)
 ├── AGENTS.md              # Règles de dev — SOURCE UNIQUE DE VÉRITÉ
 ├── CLAUDE.md             # Adaptateur Claude Code (importe AGENTS.md)
 ├── .cursor/rules/        # Adaptateur Cursor (reflète AGENTS.md)
-├── src/example_package/  # Code (1 classe par fichier)
-├── tests/unit/example_package/ # Tests en miroir de src/
+├── src/atpro/  # Code (1 classe par fichier)
+├── tests/unit/atpro/ # Tests en miroir de src/
 ├── docs/                 # Sphinx : specifications/ · api/ · guides/
 │   └── workflow/         # Process multi-IA : rôles, gates, handoff, prompts
 ├── .github/              # CI + templates d'issues (US/FEAT/Task) + PR

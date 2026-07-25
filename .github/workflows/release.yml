@@ -32,7 +32,7 @@ jobs:
       - name: Vérifier la cohérence version tag ↔ pyproject.toml
         run: |
           PKG_VERSION=$(uv run python -c "
-          import importlib.metadata; print(importlib.metadata.version('example-package'))
+          import importlib.metadata; print(importlib.metadata.version('atpro'))
           ")
           TAG_VERSION="${GITHUB_REF_NAME#v}"
           if [ "$PKG_VERSION" != "$TAG_VERSION" ]; then

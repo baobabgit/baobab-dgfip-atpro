@@ -3,14 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "example-package"
+name = "atpro"
 version = "0.1.0"
-description = "Template de projet Python piloté par plusieurs IA de développement."
+description = "Parseurs et modeles AT Pro Pilotage (DGFiP)."
 readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 authors = [{ name = "Patrick ANDRIANAIVO" }]
-keywords = ["template", "python", "ai", "agents"]
+keywords = ["atpro", "dgfip", "csv", "parser"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.13",
@@ -23,13 +23,13 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/your-repo"
-Repository = "https://github.com/your-org/your-repo"
-Documentation = "https://your-repo.readthedocs.io"
-Issues = "https://github.com/your-org/your-repo/issues"
+Homepage = "https://github.com/baobabgit/baobab-dgfip-atpro"
+Repository = "https://github.com/baobabgit/baobab-dgfip-atpro"
+Documentation = "https://github.com/baobabgit/baobab-dgfip-atpro"
+Issues = "https://github.com/baobabgit/baobab-dgfip-atpro/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/example_package"]
+packages = ["src/atpro"]
 
 [dependency-groups]
 dev = [
