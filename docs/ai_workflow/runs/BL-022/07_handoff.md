@@ -1,12 +1,11 @@
-# Handoff - BL-022
+# Handoff — BL-022
 
-## État
+## Etat
 
-- Branche `bl/022-adr-persistance` ouverte depuis `version/v0.2.0`.
-- Verrou posé (`BUSY`, run `BL-022`, rôle `architecte`).
-- Queue : `BL-022` = `IN_PROGRESS`.
-- Version `v0.2.0` : `IN_DEVELOPMENT`.
+- PR #40 mergee (squash) sur `version/v0.2.0`.
+- ADR-0002 disponible ; queue `BL-022` = DONE.
+- Run cloture (`status: MERGED`).
 
-## Prochaine action
+## Suite
 
-Rédiger `docs/architecture/adr/ADR-0002-persistance-postgresql-v020.md` selon `docs/backlog/backlogs/BL-022.md`.
+**BL-023** — dependances et configuration PostgreSQL (`DatabaseSettings`).

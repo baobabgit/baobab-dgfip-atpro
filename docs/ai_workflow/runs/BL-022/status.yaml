@@ -3,10 +3,10 @@ backlog_id: BL-022
 version_target: v0.2.0
 branch: bl/022-adr-persistance
 base_branch: version/v0.2.0
-status: IN_PROGRESS
-step: 03_implement
+status: MERGED
+step: 11_done
 active_role: architecte
 started_at: "2026-07-25T21:31:44Z"
-updated_at: "2026-07-25T21:40:00Z"
-pr_url: null
-notes: "ADR-0002 redigee — gates et PR a suivre"
+updated_at: "2026-07-25T21:40:37Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/40"
+notes: "PR #40 mergee — ADR-0002 livree"

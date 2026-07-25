@@ -1,0 +1,12 @@
+run_id: BL-024
+backlog_id: BL-024
+version_target: v0.2.0
+branch: bl/024-postgres-compose
+base_branch: version/v0.2.0
+status: MERGED
+step: 11_done
+active_role: developpeur
+started_at: "2026-07-25T21:45:00Z"
+updated_at: "2026-07-25T21:48:00Z"
+pr_url: "https://github.com/baobabgit/baobab-dgfip-atpro/pull/42"
+notes: "PR #42 mergee — compose.yml + docs/operations/database.md"
