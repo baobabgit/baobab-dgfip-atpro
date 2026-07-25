@@ -129,7 +129,7 @@ queue:
     title: "Implementer CLI minimal"
     version_target: v0.1.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-017.md
     depends_on: [BL-016]
   - id: BL-018
