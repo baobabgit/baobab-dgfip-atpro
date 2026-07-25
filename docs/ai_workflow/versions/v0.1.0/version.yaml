@@ -1,6 +1,6 @@
 version: v0.1.0
 title: "Modele canonique et parseurs CSV"
-status: RELEASE_READY
+status: RELEASED
 created_at: "2026-07-25"
 updated_at: "2026-07-25"
 scope: "Package Python atpro, modeles metier, parseurs CSV, CLI file minimal"
@@ -45,3 +45,4 @@ quality_gates:
   reference_marker_declared: passed
   make_all: passed
   coverage_ge_95: passed
+
