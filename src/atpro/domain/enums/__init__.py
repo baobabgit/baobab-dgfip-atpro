@@ -1,10 +1,24 @@
 """Enumerations partagees du domaine.
 
-Les classes concretes sont livrees par BL-004.
-
 :spec: FEAT-005.2
 """
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from atpro.domain.enums.call_direction import CallDirection
+from atpro.domain.enums.import_file_type import ImportFileType
+from atpro.domain.enums.import_severity import ImportSeverity
+from atpro.domain.enums.parse_status import ParseStatus
+from atpro.domain.enums.period_type import PeriodType
+from atpro.domain.enums.schema_version import SchemaVersion
+from atpro.domain.enums.scope_type import ScopeType
+
+__all__ = [
+    "CallDirection",
+    "ImportFileType",
+    "ImportSeverity",
+    "ParseStatus",
+    "PeriodType",
+    "SchemaVersion",
+    "ScopeType",
+]

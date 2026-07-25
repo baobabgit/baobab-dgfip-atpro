@@ -34,6 +34,7 @@ class TestDomainTree:
         assert atpro.domain.imports.__name__ == "atpro.domain.imports"
         assert atpro.domain.enums.__name__ == "atpro.domain.enums"
         assert atpro.domain.exceptions.__name__ == "atpro.domain.exceptions"
+        assert atpro.domain.value_objects.__name__ == "atpro.domain.value_objects"
 
     def test_FEAT_005_1_domain_error_usable(self) -> None:
         """DomainError est instanciable."""

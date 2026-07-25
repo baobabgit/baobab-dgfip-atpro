@@ -1,8 +1,18 @@
-"""Module reserve a l'enumeration ``CallDirection`` (BL-004).
+"""Enumeration ``CallDirection``.
 
 :spec: FEAT-005.2
 """
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from enum import StrEnum
+
+
+class CallDirection(StrEnum):
+    """Sens d'un appel telephonique.
+
+    :spec: FEAT-005.2
+    """
+
+    INCOMING = "incoming"
+    OUTGOING = "outgoing"

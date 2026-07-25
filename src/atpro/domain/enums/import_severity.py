@@ -1,8 +1,19 @@
-"""Module reserve a l'enumeration ``ImportSeverity`` (BL-004).
+"""Enumeration ``ImportSeverity``.
 
 :spec: FEAT-005.2
 """
 
 from __future__ import annotations
 
-__all__: list[str] = []
+from enum import StrEnum
+
+
+class ImportSeverity(StrEnum):
+    """Severite d'un probleme d'import.
+
+    :spec: FEAT-005.2
+    """
+
+    ERROR = "error"
+    WARNING = "warning"
+    INFO = "info"

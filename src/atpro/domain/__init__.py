@@ -14,6 +14,7 @@ from atpro.domain import (
     imports,
     sites,
     tickets,
+    value_objects,
 )
 
 __all__ = [
@@ -25,4 +26,5 @@ __all__ = [
     "imports",
     "sites",
     "tickets",
+    "value_objects",
 ]
