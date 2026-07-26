@@ -197,14 +197,14 @@ queue:
     title: "Migrer les tables imports et referentiels"
     version_target: v0.2.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-028.md
     depends_on: [BL-027]
   - id: BL-029
     title: "Migrer les tables metier importees"
     version_target: v0.2.0
     priority: P0
-    status: TODO
+    status: READY
     path: docs/backlog/backlogs/BL-029.md
     depends_on: [BL-028]
   - id: BL-030
