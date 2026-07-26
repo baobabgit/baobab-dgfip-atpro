@@ -134,3 +134,24 @@ class TestSqlAlchemyUnitOfWork:
             uow.close()
         finally:
             engine.dispose()
+
+    def test_FEAT_018_1_uow_expose_sites_et_agents(self) -> None:
+        from atpro.infrastructure.database import models as _models
+
+        engine = create_engine("sqlite:///:memory:")
+        Base.metadata.create_all(
+            engine,
+            tables=[
+                _models.ImportBatchModel.__table__,
+                _models.SiteModel.__table__,
+                _models.AgentModel.__table__,
+            ],
+        )
+        factory = SessionFactory(engine)
+        try:
+            with SqlAlchemyUnitOfWork(factory) as uow:
+                assert uow.sites is not None
+                assert uow.agents is not None
+                uow.commit()
+        finally:
+            engine.dispose()
