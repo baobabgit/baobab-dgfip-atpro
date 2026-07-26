@@ -88,9 +88,10 @@ Emplacements stables (chemins relatifs au depot, pas de chemin absolu) :
 - `migrations/env.py` — URL via `DatabaseSettings`, metadata via `Base`
 - `migrations/versions/` — revisions lisibles (`20260726_baseline`, …)
 
-La revision `20260726_baseline` est vide. La revision
-`20260726_imports_referentiels` cree les tables d'import et de referentiels
-(BL-028). Les tables metier (appels, tickets, activites) arrivent avec BL-029.
+La revision `20260726_baseline` est vide. Puis :
+
+- `20260726_imports_referentiels` — imports et referentiels (BL-028) ;
+- `20260726_business_tables` — appels, segments, tickets, activites (BL-029).
 
 ## Limites v0.2.0
 
