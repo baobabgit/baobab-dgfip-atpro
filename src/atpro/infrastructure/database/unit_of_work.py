@@ -10,7 +10,15 @@ from typing import Self
 
 from sqlalchemy.orm import Session
 
+from atpro.application.ports.agent_repository import AgentRepository
+from atpro.application.ports.site_repository import SiteRepository
 from atpro.application.ports.unit_of_work import UnitOfWork
+from atpro.infrastructure.database.repositories.agent_repository import (
+    SqlAlchemyAgentRepository,
+)
+from atpro.infrastructure.database.repositories.site_repository import (
+    SqlAlchemySiteRepository,
+)
 from atpro.infrastructure.database.session import SessionFactory
 from atpro.infrastructure.database.unit_of_work_error import (
     UnitOfWorkAlreadyCommittedError,
@@ -21,8 +29,8 @@ from atpro.infrastructure.database.unit_of_work_error import (
 class SqlAlchemyUnitOfWork(UnitOfWork):
     """Unit of Work transactionnelle basee sur une session SQLAlchemy.
 
-    Les repositories seront exposes ici lorsqu'ils seront disponibles
-    (BL-030+). La session reste un detail d'infrastructure.
+    Expose les repositories Site et Agent (BL-030). La session reste un
+    detail d'infrastructure.
 
     :spec: FEAT-016.2
     """
@@ -36,6 +44,8 @@ class SqlAlchemyUnitOfWork(UnitOfWork):
         self._session: Session | None = None
         self._committed = False
         self._closed = False
+        self._sites: SiteRepository | None = None
+        self._agents: AgentRepository | None = None
 
     @property
     def session(self) -> Session:
@@ -50,6 +60,28 @@ class SqlAlchemyUnitOfWork(UnitOfWork):
                 "Unit of Work fermee ou non entree : session indisponible."
             )
         return self._session
+
+    @property
+    def sites(self) -> SiteRepository:
+        """Repository sites de la transaction courante.
+
+        :returns: Port :class:`SiteRepository`.
+        :raises UnitOfWorkClosedError: Si UoW non ouverte.
+        """
+        if self._sites is None:
+            self._sites = SqlAlchemySiteRepository(self.session)
+        return self._sites
+
+    @property
+    def agents(self) -> AgentRepository:
+        """Repository agents de la transaction courante.
+
+        :returns: Port :class:`AgentRepository`.
+        :raises UnitOfWorkClosedError: Si UoW non ouverte.
+        """
+        if self._agents is None:
+            self._agents = SqlAlchemyAgentRepository(self.session)
+        return self._agents
 
     def __enter__(self) -> Self:
         """Ouvre une session et demarre le cycle de vie.
@@ -67,6 +99,8 @@ class SqlAlchemyUnitOfWork(UnitOfWork):
             )
         self._session = self._session_factory.create_session()
         self._committed = False
+        self._sites = None
+        self._agents = None
         return self
 
     def __exit__(
@@ -113,4 +147,6 @@ class SqlAlchemyUnitOfWork(UnitOfWork):
         if self._session is not None and not self._closed:
             self._session.close()
         self._session = None
+        self._sites = None
+        self._agents = None
         self._closed = True
