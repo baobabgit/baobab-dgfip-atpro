@@ -204,14 +204,14 @@ queue:
     title: "Migrer les tables metier importees"
     version_target: v0.2.0
     priority: P0
-    status: IN_PROGRESS
+    status: DONE
     path: docs/backlog/backlogs/BL-029.md
     depends_on: [BL-028]
   - id: BL-030
     title: "Implementer repositories Site et Agent"
     version_target: v0.2.0
     priority: P0
-    status: TODO
+    status: READY
     path: docs/backlog/backlogs/BL-030.md
     depends_on: [BL-029]
   - id: BL-031
