@@ -1,0 +1,12 @@
+run_id: BL-028
+backlog_id: BL-028
+version_target: v0.2.0
+branch: bl/028-migrate-imports-referentiels
+base_branch: version/v0.2.0
+status: IN_PROGRESS
+step: 03_implement
+active_role: developpeur
+started_at: "2026-07-26T09:21:02Z"
+updated_at: "2026-07-26T09:24:00Z"
+pr_url: null
+notes: "Gates locaux verts"

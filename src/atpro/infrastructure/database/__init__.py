@@ -5,6 +5,7 @@
 
 from __future__ import annotations
 
+from atpro.infrastructure.database import models
 from atpro.infrastructure.database.alembic_config_factory import AlembicConfigFactory
 from atpro.infrastructure.database.base import Base
 from atpro.infrastructure.database.constraint_naming_convention import (
@@ -29,4 +30,5 @@ __all__: list[str] = [
     "UnitOfWorkAlreadyCommittedError",
     "UnitOfWorkClosedError",
     "UnitOfWorkError",
+    "models",
 ]

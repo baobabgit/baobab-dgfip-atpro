@@ -39,7 +39,7 @@ class TestAlembicConfigFactory:
         settings = DatabaseSettings(database_url=url)
         config = AlembicConfigFactory().create(settings=settings)
         script = ScriptDirectory.from_config(config)
-        assert script.get_current_head() == "20260726_baseline"
+        assert script.get_current_head() == "20260726_imports_referentiels"
 
         command.upgrade(config, "head")
         command.downgrade(config, "base")
