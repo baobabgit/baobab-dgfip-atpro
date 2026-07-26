@@ -1,3 +1,3 @@
 # Handoff — BL-028
 
-Suite apres merge : **BL-029** (tables metier).
+PR #51 mergee. Suite : **BL-029**.
