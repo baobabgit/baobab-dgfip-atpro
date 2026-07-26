@@ -11,6 +11,7 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from atpro.infrastructure.config.database_settings import DatabaseSettings
+from atpro.infrastructure.database import models as _models  # noqa: F401
 from atpro.infrastructure.database.base import Base
 
 config = context.config

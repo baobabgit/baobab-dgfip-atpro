@@ -197,7 +197,7 @@ queue:
     title: "Migrer les tables imports et referentiels"
     version_target: v0.2.0
     priority: P0
-    status: READY
+    status: IN_PROGRESS
     path: docs/backlog/backlogs/BL-028.md
     depends_on: [BL-027]
   - id: BL-029
