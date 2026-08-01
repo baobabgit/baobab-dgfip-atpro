@@ -48,7 +48,7 @@ jobs:
       - name: Publier SARIF
         if: always()
         continue-on-error: true
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@v4.37.3
         with:
           sarif_file: bandit.sarif
       - name: Bandit (gate)
